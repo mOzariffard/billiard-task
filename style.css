@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: 700;
+}
+
+body {
+    
+    background-color: black;
+}
+
+/* ----- Styling the navnar ----- */
+.head-container{
+    background-color: black;
+    height: 100px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ---  styling the navbar---- */
+.ul-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    color: red;
+    list-style: none;
+}
+
+/* -----Styleing for nav bar----- */
+ .ul-container li a{
+    text-decoration: none;
+    color: red;
+    /* display: inline-block; */
+ }
+
+
+ li a::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: red;
+    transition: all 0.5s;
+ }
+
+ li a:hover::after{
+    width: 100%;
+ }
+
+ /* -----fixing the picture for section---- */
+ .billiard-pic{
+    height: 1512px;
+    height: 413px;
+    background-image: url(images/billiard-table.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+ }
+
+ .sec-container{
+     height: 1512px;
+    height: 413px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    row-gap: 6rem;
+ }
+
+   .h1-sec{
+    font-size: 4rem;
+     color: white;
+     text-align: center;
+  }
+
+  /* ----- btn of the section----- */
+  .btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .list-btn{
+   background-color: black;
+   text-align: center;
+   text-decoration: none;
+    color: white;
+    width: 215px;
+    height: 60px;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 700;
+  }
+
+  /* ----- styling the btn of the ----- */
+
+  .active{
+   background-color: red;
+  }
+
+  .list-btn:hover{
+   background-color: red;
+  }
+
+
+  /* ----- CONTENT OF GAME PART */
+  .game-container{
+     display: grid;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .game-header{
+   margin-top: 60px;
+   text-align: center;
+   color: white;
+  }
+
+  .player-container {
+   margin-top: 50px;
+   display: flex;
+   justify-content: center;
+   justify-items: center;
+   align-items: center;
+   gap: 4rem;
+  }
+
+  /* ---- Counter ----- */
+  .h2-count{
+   color: white;
+   font-weight: 900;
+  }
+
+  .count-point{
+   border: 1px solid red;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   padding: 6px;
+   border-radius: 5px;
+}
+
+  .count-point .h2-count + .h2-count {
+   border-left: 1px solid red;
+   padding-left: 1rem; /* space between the line and the number */
+   margin-left: 0;     /* remove this - gap already handles the spacing */
+}
+
+
+/* ----- Plyaer1 ----- */
+.player-one-container{
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+}
+.box-player-one{
+   position: relative;
+   border: 1px solid red;
+   width: 150px;
+   height: 91px;
+   border-radius: 10px;
+}
+
+.player-one-img{ 
+   position: absolute;
+   top: -34px;    /* Position outside top border */
+   left: 50%;     /* Center horizontally */
+   transform: translateX(-50%);
+}
+
+.player-one-name{
+   color: white;
+   font-weight: 900;
+   text-align: center;
+}
+
+/* ----- Player2 ----- */
+.player-two-container{
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+}
+
+
+.box-player-two{
+   position: relative;
+   border: 1px solid red;
+   width: 150px;
+   height: 91px;
+   border-radius: 10px;
+}
+
+
+.player-two-img{ 
+   position: absolute;
+   height: 129px;
+   top: -40px;    /* Position outside top border */
+   left: 50%;     /* Center horizontally */
+   transform: translateX(-50%);
+}
+
+.player-two-name{
+   color: white;
+   font-weight: 900;
+   text-align: center;
+}
+
+
+/* ----- STYLING THE DATE PART */
+.match-date{
+   margin-top: 30px;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.match-date p{
+   text-align: center;
+   color: white;
+   font-weight: 700;
+}
+
+.game-live-btn{
+   width: 126px;
+   height: 38px;
+   border: 2px solid red;
+   border-radius: 7px;
+   background-color: red;
+   text-align: center;
+   text-decoration: none;
+   color: white;
+   font-weight: 900;
+}
+
+
+.hr-break{
+   margin-top: 40px;
+   color: red;
+   border: 1px solid;
+}
