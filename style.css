@@ -249,3 +249,110 @@ body {
    color: red;
    border: 1px solid;
 }
+
+
+
+/* ------ FOOTER ----- */
+.footer-style{
+   width: auto;
+   background-color:#222128;
+   direction: rtl;
+}
+
+.footer-container{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 4rem;
+}
+
+.footer-communication h1{
+   text-align: center;
+   color: white;
+   font-weight: 900;
+}
+
+.icon-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+}
+
+/* ----FOOTER-LINKS ----- */
+.footer-link{
+   padding: 50px;
+}
+.footer-link h1{
+   text-align: center;
+   color: white;
+}
+
+.links-footer-container {
+   display: grid;
+   justify-content: start;
+   align-items: center;
+}
+
+.links-footer-container a{
+   font-weight: 500;
+   text-decoration: none;
+   color: white;
+   size: 24px;
+   font-size: large;
+}
+
+
+/* ----- CONTANCT FOOTER ----- */
+.footer-contact h1{
+   text-align: center;
+   color: white;
+}
+
+.call-container{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   gap: 0.2rem;
+}
+
+.call-container h3{
+   text-align: center;
+   color: white;
+}
+
+.address-container{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   gap: 0.2rem;
+}
+
+.address-container h3{
+   text-align: start;
+   color: white;
+}
+
+.copy-right-container{
+   padding: 20px;
+   text-align: center;
+   background-color: black;
+}
+
+
+.copy-right-container h2{
+   text-align: center;
+   color: white;
+}
+
+.copy-right-container span{
+   color: red;
+}
+
+
+.ranking-container{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 3rem;
+}
