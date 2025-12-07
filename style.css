@@ -350,9 +350,131 @@ body {
 }
 
 
+/* ----- Ranking Part ----- */
+
+/* ----- CHART OF THE RANK PLAYER */
 .ranking-container{
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between; /* Changed from space-around */
    align-items: center;
-   gap: 3rem;
+   gap: 1rem;
+}
+.rank-player-container{
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   gap: 0.5rem;
+   flex: 1; /* Added to center the ranking section */
+   text-align: center; /* Added for better centering */
+}
+.rank-player-container h1{
+   text-align: center;
+   color: white;
+   font-weight: 900;
+   font-size: 48px; /* Fixed: should be font-size, not size */
+}
+.img-container{
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+}
+
+/* background ranking plyer */
+.bg-ranking-player{
+   display: flex;
+   justify-content: start;
+   justify-items: center;
+   align-items: center;
+   gap: 2rem;
+   width: 901px;
+   height: 159px;
+   border-radius: 20px;
+   background-color: #FFFB00;
+}
+
+/* ----- Position Of Place Mumber ----- */
+.bg-ranking-player h1{
+   margin-right: 30px;
+}
+
+.ranking-player-container{
+   display: flex;
+   justify-content: space-between;
+   align-items:center ;
+   width: 843px;
+   height: 159px;
+   border: 3px solid #FFFB00;
+   border-radius: 20px 0 0 20px ;
+   background-color: white;
+}
+
+/* ----- postion of the name of the player -----*/
+.player-name{
+   display: flex;
+   flex: 1;
+   justify-content: center;
+   align-items: center;
+}
+.player-name h2{
+   text-align: center;
+   font-weight: 600;
+   font-size: 48px;
+}
+
+/* ----- Position of the player img -----*/
+.ranking-player-img{
+   position: relative;
+   top: -40px;
+}
+
+
+
+/* ----- Player 2 in Second place */
+
+.bg-ranking-player2{
+   display: flex;
+   justify-content: start;
+   justify-items: center;
+   align-items: center;
+   gap: 2rem;
+   width: 901px;
+   height: 106px;
+   border-radius: 20px;
+   background-color: #939393;
+}
+
+.bg-ranking-player2 h1{
+   margin-right: 30px ;
+}
+
+.ranking-second-place-container{
+   display: flex;
+   justify-content: space-between;
+   align-items:center ;
+   width: 843px;
+   height: 106px;
+   border: 3px solid #939393;
+   border-radius: 20px 0 0 20px ;
+   background-color: white;
+}
+
+.player-second-place-name{
+   display: flex;
+   flex: 1;
+   justify-content: center;
+   align-items: center;
+}
+
+.player-second-place-name h2{
+   text-align: center;
+   font-weight: 600;
+   font-size: 32px;
+}
+
+.ranking-second-player-img{
+   position: relative;
+   width: 76px;
+   height: 98;
+   top: 1px;
+   left: -8%;
 }
