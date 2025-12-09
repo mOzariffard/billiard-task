@@ -89,10 +89,11 @@ body {
    background-color: black;
    text-align: center;
    text-decoration: none;
+   cursor: pointer;
     color: white;
     width: 215px;
     height: 60px;
-    border: 2px solid red;
+    border: 2px solid #CA0000;
     border-radius: 10px;
     font-size: large;
     font-weight: 700;
@@ -101,11 +102,11 @@ body {
   /* ----- styling the btn of the ----- */
 
   .active{
-   background-color: red;
+   background-color: #CA0000;
   }
 
   .list-btn:hover{
-   background-color: red;
+   background-color: #CA0000;
   }
 
 
@@ -138,7 +139,7 @@ body {
   }
 
   .count-point{
-   border: 1px solid red;
+   border: 1px solid #CA0000;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -148,7 +149,7 @@ body {
 }
 
   .count-point .h2-count + .h2-count {
-   border-left: 1px solid red;
+   border-left: 1px solid #CA0000;
    padding-left: 1rem; /* space between the line and the number */
    margin-left: 0;     /* remove this - gap already handles the spacing */
 }
@@ -163,7 +164,7 @@ body {
 }
 .box-player-one{
    position: relative;
-   border: 1px solid red;
+   border: 1px solid #CA0000;
    width: 150px;
    height: 91px;
    border-radius: 10px;
@@ -193,7 +194,7 @@ body {
 
 .box-player-two{
    position: relative;
-   border: 1px solid red;
+   border: 1px solid #CA0000;
    width: 150px;
    height: 91px;
    border-radius: 10px;
@@ -234,9 +235,9 @@ body {
 .game-live-btn{
    width: 126px;
    height: 38px;
-   border: 2px solid red;
+   border: 2px solid #CA0000;
    border-radius: 7px;
-   background-color: red;
+   background-color: #CA0000;
    text-align: center;
    text-decoration: none;
    color: white;
@@ -246,7 +247,7 @@ body {
 
 .hr-break{
    margin-top: 40px;
-   color: red;
+   color: #CA0000;
    border: 1px solid;
 }
 
@@ -346,7 +347,7 @@ body {
 }
 
 .copy-right-container span{
-   color: red;
+   color: #CA0000;
 }
 
 
@@ -595,6 +596,64 @@ body {
     text-align: center;
    font-weight: 600;
    font-size: 32px;
+}
+
+
+/* ---- This styling for the after 10th place */
+.bg-ranking-after-ten-place{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 1rem;
+   width: 901px;
+   height: 106px;
+   background-color: #4e9fa0;
+   border-radius: 20px;
+}
+
+.bg-ranking-after-ten-place h1{
+    text-align: center;
+   font-weight: 900;
+   font-size: 40px;
+   margin-right: 23px;
+}
+
+
+
+.ranking-after-ten-place-player{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 843px;
+   height: 106px;
+   background-color: white;
+   border: 3px solid #4e9fa0;
+   border-radius: 20px 0 0 20px;
+}
+
+
+.changer-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+}
+
+.changer-container h1{
+   text-align: center;
+   color: white;
+}
+
+
+
+/* ----- styling the btn of the changing the pages */
+.btn-page{
+   background: none;
+   border: none;
+   width: 30px;
+   height: 39px;
+   border: 40px;
+   cursor: pointer;
 }
 
 
