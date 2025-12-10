@@ -854,4 +854,51 @@ body {
    margin-top: -66px;
 }
 
+.connector-line-final-up{
+   width: 8px;
+   height: 0;
+   border: 2px solid #FFFF;
+   margin-right:143px ;
+   margin-top: -20px;
+}
 
+.connector-line-final{
+   width: 0;
+   height: 257px;
+   border: 2px solid #FFFF;
+   margin-top:-4px ;
+   margin-right:147px ;
+}
+
+.connector-line-champ{
+   width: 107px;
+   height: 0;
+   border: 2px solid #FFFF;
+   margin-top:-128px ;
+   margin-right:148px ;
+}
+
+
+.left-connector-line{
+    width: 0;
+   height: 257px;
+   border: 2px solid #FFFF;
+   margin-top:-4px ;
+   margin-right:-13px ;
+}
+
+.left-connector-line-final-up{
+   width: 8px;
+   height: 0;
+   border: 2px solid #FFFF;
+   margin-right:-9px ;
+   margin-top: 36px;
+}
+
+.left-connector-line-final-champ{
+   width: 105px;
+   height: 0;
+   border: 2px solid #FFFF;
+   margin-top:-128px ;
+   margin-right:-114px ;
+}
