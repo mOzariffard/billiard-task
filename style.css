@@ -669,6 +669,7 @@ body {
    font-weight: 900;
    color: white;
    font-size: 40px;
+   margin-right: 100px;
 }
 
 
@@ -690,6 +691,7 @@ body {
 
 .chart-competition{
    margin-top: 30px;
+   margin-right: 100pxs;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -700,41 +702,41 @@ body {
 /* From Uiverse.io by CristianMontoya98 */ 
 /* Styling the btn of the chart-btn */
 .chart-btn {
- width: 186.03px;
+   width: 186.03px;
    height: 65.53px;
- margin: 0.5em;
- background: black;
- color: white;
- border: 1px solid white;
- border-radius: 0.625em;
- cursor: pointer;
- position: relative;
- z-index: 1;
- overflow: hidden;
+   margin: 0.5em;
+   background: black;
+   color: white;
+   border: 1px solid white;
+   border-radius: 0.625em;
+   cursor: pointer;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
 }
 
 .chart-btn:hover {
- color: white;
- border: 1px solid #CA0000;
+   color: white;
+   border: 1px solid #CA0000;
 }
 
 .chart-btn:after {
- content: "";
- background: #CA0000;
- position: absolute;
- z-index: -1;
- left: -20%;
- right: -20%;
- top: 0;
- bottom: 0;
- transform: skewX(-45deg) scale(0, 1);
- transition: all 0.5s;
+   content: "";
+   background: #CA0000;
+   position: absolute;
+   z-index: -1;
+   left: -20%;
+   right: -20%;
+   top: 0;
+   bottom: 0;
+   transform: skewX(-45deg) scale(0, 1);
+   transition: all 0.5s;
 }
 
 .chart-btn:hover:after {
- transform: skewX(-45deg) scale(1, 1);
- -webkit-transition: all 0.5s;
- transition: all 0.5s;
+   transform: skewX(-45deg) scale(1, 1);
+   -webkit-transition: all 0.5s;
+   transition: all 0.5s;
 }
 
 .chart-btn h3{
@@ -744,5 +746,112 @@ body {
    text-align: center;
 }
 
+
+/* ----- styling the chart for the competitions ----- */
+.tournament-bracket {
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   gap: 7rem;
+   direction: rtl;
+   margin-top: 35px;
+   margin-right: 20px;
+}
+
+.bracket-items{
+   display: grid;
+   justify-content: center;
+   justify-items: center;
+   align-items: center;
+   gap: 3rem;
+}
+
+   .group-name{
+   width: 142.45px;
+   height: 77.09px;
+   font-weight: 600;
+   font-size: 20px;
+   border: 1px solid #FFFF;
+   border-radius: 11px;
+   background-color: #0000;
+   cursor: pointer;  
+}
+
+.winner{
+   background-color: #CA0000;
+   border: 1px solid #CA0000;
+}
+
+.group-items {
+   color: white;
+   text-align: center;
+   margin-top: 20px; 
+}
+
+      /* ----- Styling the part of the final -----*/
+
+.bracket-items-final{
+         display: grid;
+         justify-content: center;
+         justify-items: center;
+         align-items: center;
+         gap: 11rem;
+}
+
+/* ----- styling the connector line ----- */
+
+/* ----- line for normal one ----- */
+.connector-line{
+   width: 105px;
+   height: 0;
+   border:2px solid #FFFF;
+   margin-right: 141px;
+   margin-top: -20px;
+}
+
+.connector-line-up{
+   width: 0;
+   height: 62px;
+   margin-right: 242px;
+   margin-top: -65px;
+   border: 2px solid #FFFF;
+}
+
+.connector-line-center{
+   width: 18px;
+   height: 0;
+   border: 2px solid #CA0000;
+   margin-right: 242px;
+}
+.connector-line-down{
+   width: 0;
+   height: 62px;
+   margin-right: 242px;
+   margin-top: -1px;
+   border: 2px solid #FFFF;
+}
+
+.connector-line-winner-down{
+   width: 0;
+   height: 62px;
+   margin-right: 242px;
+   border: 2px solid #CA0000;
+}
+
+.connector-line-winner{
+   width: 105px;
+   height: 0;
+   border: 2px solid #CA0000;
+   margin-right: 141px;
+   margin-top: -19px;
+}
+
+.connector-line-winner-up{
+   width: 0;
+   height: 62px;
+   margin-right: 242px;
+   border: 2px solid #CA0000;
+   margin-top: -66px;
+}
 
 
