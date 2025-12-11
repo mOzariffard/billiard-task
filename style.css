@@ -879,6 +879,8 @@ body {
 }
 
 
+
+/* ----- Left side of the code for brackets line ----- */
 .left-connector-line{
     width: 0;
    height: 257px;
@@ -901,4 +903,133 @@ body {
    border: 2px solid #FFFF;
    margin-top:-128px ;
    margin-right:-114px ;
+}
+
+.left-connector-line-round-one{
+   width: 105px;
+   height: 0;
+   border: 2px solid #FFFF;
+   margin-right:-106px;
+   margin-top: 35px;
+}
+
+
+.left-connector-line-round-one-down{
+   width: 0;
+   height: 62px;
+   border: 2px solid #FFFF;
+   margin-top: -3px;
+   margin-right:-106px ;
+}
+
+.left-connector-line-round-one-up{
+   width: 0;
+   height: 62px;
+   border: 2px solid #FFFF;
+   margin-top: -64px;
+   margin-right:-106px ;
+}
+
+.left-connector-line-center-round-one{
+   width: 11px;
+   height: 0;
+   border: 2px solid #FFFF;
+   margin-top:-65px ;
+   margin-right: -113px;
+}
+
+
+
+/* ---- Details competiotions ----- */
+.competitions-details{
+   width: 1373;
+   height: 930px;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+   margin: 30px;
+   margin-top: 5rem;
+   border: 2px solid #CA0000;
+   border-radius: 10px;
+}
+
+.competitions-player-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 3rem;
+}
+
+.competitions-player-content{
+   width: 264px;
+   height: 167px;
+   border: 1px solid #CA0000;
+   border-radius: 10px;
+}
+
+
+/* ----- Image of the players -----*/
+.competitions-img{
+   text-align: center;
+   width: 166px;
+   height: 213px;
+   margin-right: 48px;
+   margin-top: -49px;
+}
+
+/* ----- styling the Counting part  */
+.competitions-counter-point{
+   width: 141px;
+   height: 80px;   
+   border: 1px solid #CA0000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   padding: 6px;
+   border-radius: 5px;
+}
+
+.competitions-counter-number{
+   color: white;
+   font-weight: 900;
+}
+
+.count-line{
+   height: 60px;
+   border: 1px solid #CA00008A;
+   
+}
+
+/* ----syling the container ----- */
+
+.score-container{
+   margin-top: -500px;
+   display: grid;
+   justify-content: center;
+   justify-items: center;
+   align-items: center;
+   gap: 1rem;
+}
+
+.score-items{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 12rem;
+   color: #FFFF;
+}
+
+.score-items-number{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 15.6rem;
+   color: #FFFF;
+}
+
+.competitions-line{
+   width: 1330px;
+   border: 1px solid #FFFF;
 }
