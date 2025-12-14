@@ -1043,7 +1043,7 @@ body {
    align-items: center;
    height: 1021px;
    margin: 30px auto 0 auto ;
-   width: 1374px;
+   width: 1874px;
    border: 1px solid #CA0000;
    border-radius: 30px;
 }
@@ -1097,7 +1097,7 @@ body {
    height: 220px ;
    top:10px;
    padding:31px;
-   left: 1457px;
+   left: 1819px;
    border-radius: 100%;
 }
 
@@ -1105,7 +1105,7 @@ body {
 .image-eight-pool{
    position: absolute;
    top: -34px;
-   left: 280px;
+   left:140px;
 }
 
 .player-name-headin{
@@ -1124,8 +1124,7 @@ body {
 
 /* ----- Skills section ----- */
 .skills-section{
-   width: 1374px;
-   height:518px;
+   height: 518px;
    display: flex ;
    justify-content: center;
    align-items: center;
@@ -1143,7 +1142,8 @@ body {
    flex-wrap: wrap;
    justify-content: center;
    align-items: center;
-   gap: 3rem;
+   column-gap: 7rem;
+   row-gap: 2rem;
    border: 1px solid #CA0000;
    border-radius: 20px;
    padding: 30px;
@@ -1179,4 +1179,136 @@ body {
 
 .players-description h1{
    color: white;
+}
+
+/* ----- Bio Section ----- */
+
+
+.players-btn{
+   margin: 80px 150px 0 auto;
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  height: auto;
+  width: auto;
+  
+}
+
+/* btn of bio */
+.players-btn-container{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   gap: 1rem;
+}
+.players-bio-btn{
+   width: 101px;
+   height: 35px;
+   border-radius: 67px;
+   background-color: #CA0000;
+   color: white;
+   border: 1px solid #CA0000;
+   cursor: pointer;
+}
+.players-btn-normal{
+   width: 101px;
+   height: 35px;
+   background-color: black;
+   color: white;
+   border: 1px solid #CA0000;
+   border-radius: 67px;
+   cursor: pointer;
+}
+
+/* ----- Players of the Introduction ------ */
+.players-introduction{
+   margin-top: 20px;
+   width: 1322px;
+   height: 262px;
+}
+
+.players-introduction h3{
+   text-align: start;
+   color: white;
+   font-weight: 700;
+   font-size: 24px;
+}
+
+/* ----- Table of the Player ----- */
+
+.history-section{
+   display: flex;
+   justify-content: start;
+
+}
+
+.table-container{
+   width: 1339px;
+   height: 697px;
+   margin: 20px auto 0 ;
+   color: white;
+   border: 1px solid #CA0000;
+   border-radius: 20px;
+}
+
+.table-container table{
+   text-align: start;
+   padding: 20px;
+   border-collapse: collapse;
+   width: 100%;
+}
+
+thead{
+   background-color: #5F5F5F;
+   border: 1px solid #CA0000;
+}
+
+tbody {
+   border: 1px solid #CA0000;
+}
+
+td{
+   text-align: center;
+   padding: 20px;
+   font-weight: 700;
+   font-size: 24px;
+   border-bottom: 1px solid #CA0000;
+}
+
+.table-container th {
+   padding: 30px;
+   font-weight: 700;
+   font-size: 24px;
+}
+
+.table-header{
+   display: flex;
+   justify-content: start;
+   align-items: center;
+}
+
+.win{
+   color: #26D266;
+}
+.result {
+   background-color:#26D266;
+   display: inline-block;
+   padding: 6px 12px;
+   border-radius: 20px;
+   font-weight: 700;
+   font-size: 0.85em;
+}
+
+
+.loose{
+   color: #CA0000;
+}
+
+.loose-result{
+   background-color: #CA0000;
+   display: inline-block;
+   padding: 6px 12px;
+   border-radius: 20px;
+   font-weight: 700;
+   font-size: 0.85em;
 }
