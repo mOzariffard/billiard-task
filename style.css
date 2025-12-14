@@ -1033,3 +1033,150 @@ body {
    width: 1330px;
    border: 1px solid #FFFF;
 }
+
+
+/* ----- Styling the Player page -----*/
+.players-section{
+   background-color: #CA0000;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   height: 1021px;
+   margin: 30px auto 0 auto ;
+   width: 1374px;
+   border: 1px solid #CA0000;
+   border-radius: 30px;
+}
+
+.player-image-section{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.player-material{
+   margin: 80px;   
+   display: grid;
+   justify-content: center;
+   justify-items: center;
+   align-items: center;
+}
+
+/* ----- Border of the player image ----- */
+.image-players{
+   width: 294px;
+   height: 279px;
+   border: 5px solid black;
+   border-radius: 187px;
+}
+
+.players-image-player{
+   text-align: center;
+  margin-top: -49px;
+  margin-left: -3px;
+}
+/* ----Logo of the player */
+.player-logo{
+   position: absolute;
+   background-color: white;
+   width: 80px;
+   height: 73px;
+   text-align: center;
+   border: 5px solid black;
+   border-radius: 100%;
+   margin-top: -78px;
+   margin-left: 206px;
+}
+
+
+/*----- Logo of the page ----- */
+.logo-page{
+   background-color: black;
+   position:absolute;
+   width:217px ;
+   height: 220px ;
+   top:10px;
+   padding:31px;
+   left: 1457px;
+   border-radius: 100%;
+}
+
+/*----- logo of the background ----- */
+.image-eight-pool{
+   position: absolute;
+   top: -34px;
+   left: 280px;
+}
+
+.player-name-headin{
+   width: 650px;
+   height: 111px;
+     text-align: center;
+}
+
+.player-name-headin h1{
+  text-shadow: 3px 10px 4px rgba(0, 0, 0.7);
+   text-align: center;
+   font-weight: 700;
+   color: white;
+   font-size: 64px;
+}
+
+/* ----- Skills section ----- */
+.skills-section{
+   width: 1374px;
+   height:518px;
+   display: flex ;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   background-color: black;
+   border: 4px solid #CA0000;
+   border-radius: 0 0 34px 30px;
+   padding: 30px;
+}
+
+/* ----- skills Items ---- */
+.skills-items{
+   background-color: #180404;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 3rem;
+   border: 1px solid #CA0000;
+   border-radius: 20px;
+   padding: 30px;
+}
+
+
+/* ----- Each Skills ----- */
+.players-informations{
+   width: 268px;
+   height: 123px;
+   display: grid ;
+   justify-content: center;
+   align-items: center;
+   justify-items: center;
+   gap: 1rem;
+   background-color: #231212;
+   border-radius: 20px;
+}
+
+/* ----- Topic of the skills ----- */
+.players-topics{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 0.3rem;
+}
+
+.players-topics h1{
+   color: #CA0000;
+   font-weight: 700;
+   font-size: 32px;
+}
+
+.players-description h1{
+   color: white;
+}
