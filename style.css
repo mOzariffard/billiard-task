@@ -11,9 +11,34 @@ body {
     background-color: black;
 }
 
+/*----- using for persian number ----- */
+.persian-number {
+  font-family: "Vazirmatn", sans-serif;
+  font-feature-settings: "ss01";
+}
+
+
+/*----- Head of the home page ----- */
+.head-home-page{
+   background-color: #CA0000;
+   height: 52px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 2rem;
+}
+
+.head-address-container{
+   width: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+}
+
 /* ----- Styling the navnar ----- */
 .head-container{
-    background-color: black;
+    background-color: #222128;
     height: 100px;
     display:flex;
     justify-content: space-around;
@@ -23,6 +48,7 @@ body {
 
 /* ---  styling the navbar---- */
 .ul-container{
+   background-color:#222128;
     display: flex;
     justify-content: space-between;
     align-items: center;
