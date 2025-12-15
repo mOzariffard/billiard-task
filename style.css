@@ -129,6 +129,94 @@ body {
   left: 0;
 }
 
+/* ----- Hero Section part of the page ----- */
+.hero-section{
+   background-color: #222128;
+   display: flex;
+   justify-content: stretch;
+   align-items: center;
+   gap: 3rem;
+   /* make this a positioned container so absolute children (hero-line) are relative to it */
+   position: relative;
+   /* add bottom padding so content doesn't overlap with the hero-line placed outside */
+   padding-bottom: 80px;
+}
+
+/* ----- Texting the hero section ----- */
+.hero-text-container{
+   display: grid;
+   justify-content: center;
+   justify-items: start;
+   gap: 3rem;
+   margin-bottom: 40px;
+}
+
+.hero-header{
+   color: white;
+   font-weight: 900;
+   font-size: 90px;;
+}
+
+.hero-description{
+   width: 541px;
+   height: 34px;
+   color: white;
+   font-weight: 400;
+   font-size: 14px;
+}
+
+.hero-register{
+   width: 186px;
+   height: 43px;
+   color: black;
+   background-color: #FFFF;
+   border-radius: 50px;
+   cursor: pointer;
+   border: none;
+}
+
+/* ----- line for hero section ----- */
+.hero-line{
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0px;
+   display: grid;
+   justify-content: flex-end;
+   row-gap: 1rem;
+   align-items: center;
+   padding-right: 24px; /* keep some space from the right edge */
+}
+
+.hero-line img{
+   /* keep image positioned inline inside the hero-line container */
+   position: relative;
+   left: 0;
+   bottom: 0;
+   height: auto;
+}
+/* ----- Styling the 8-pool ball -----*/
+.hero-eight-pool-bg{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   width: 58px;
+   height: 54px;
+   background-color: white;
+   border-radius: 50%;
+   margin-right: 12px; /* space between the circle and the hero-line image */
+}
+
+.eight-pool-text {
+   width: 45px;
+   height: 45px;
+   text-align: center;
+   background-color: black;
+   color: white;
+   border-radius: 50%;
+}
+
  /* -----fixing the picture for section---- */
  .billiard-pic{
     height: 1512px;
