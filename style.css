@@ -78,6 +78,57 @@ body {
     width: 100%;
  }
 
+ /* ---- styling search for Icon ----- */
+#search-part {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 250px;
+}
+
+.input {
+  font-family: "Montserrat", sans-serif;
+  width: 241px;
+  height: 35px;
+  padding-right: 2.5rem; /* Changed from padding-left to padding-right for RTL */
+  padding-left: 1rem; /* Add left padding for text */
+  border: 0;
+  border-radius: 41px;
+  background-color: #ffffff;
+  outline: none;
+  color: #000000;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+  z-index: 0;
+}
+
+.input::placeholder {
+  color: #bdbecb;
+}
+
+.search-icon-container {
+  position: absolute;
+  background-color: #CA0000;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  right: 2px; /* Changed from left to right for RTL */
+  z-index: 1;
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+  fill: black; /* Changed to white to be visible on red background */
+  pointer-events: none;
+  position: relative;
+  left: 0;
+}
+
  /* -----fixing the picture for section---- */
  .billiard-pic{
     height: 1512px;

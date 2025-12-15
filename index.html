@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vazirmatn@latest/Vazirmatn-font-face.css">
-     <title> Home Page </title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <title> Home Page </title>
 </head>
 <body>
     <head>
@@ -14,19 +14,32 @@
         <div dir="rtl" class="head-home-page">
             <img src="images/header.png" alt="header">
         </div>
-        <div class="head-container">
-                <!-- LOGO of the website -->
-            <div id="search-part">
-                
+       <div class="head-container">
+            <!-- LOGO of the website -->
+            <div dir="rtl" id="search-part">
+                <div class="search-icon-container">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                        <g>
+                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                        </g>
+                    </svg>
+                </div>
+                    <input
+                        id="query"
+                        class="input"
+                        type="search"
+                        placeholder="جستجو کنید..."
+                        name="searchbar"
+                    />
             </div>
-                    <!-- NAV BAR -->
+            <!-- NAV BAR -->
             <nav>
                 <ul dir="rtl" class="ul-container">
                     
                     <li> <a  href="index.html"> صفحه اصلی </a> </li>
                     <li> <a  href="competions.html"> مسابقات </a> </li>
                     <li> <a  href="players.html"> بازیکنان  </a> </li>
-                    <li> <a  href="live.html"> زنده </a> </li>
+                    <li> <a  href="live.html"> زنده  </a></li>
                     <li> <a  href="gallery.html"> گالری مسابقات </a> </li>
                 </ul>
             </nav>
