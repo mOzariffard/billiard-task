@@ -571,6 +571,103 @@ body {
 
 
 
+
+/* ----- Styling another footer upper ----- */
+.home-sign-up-section{
+   margin: 0 auto ;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   width: 1347px;
+   height: 332px;
+   background-color: #CA0000;
+   border-radius: 26px;
+}
+
+.home-texts-container{
+   display: grid;
+   justify-content: center;
+   justify-items: start;
+   gap: 2rem;
+}
+
+.home-texts-container h1{
+   color: white;
+   font-weight: 700;
+   font-size: 48px;
+}
+.home-texts-container span{
+color: black;
+}
+
+.home-texts-container h3{
+   color: white;
+   font-weight: 600;
+   font-size: 16px;
+}
+
+/* -----input of footer */
+.input-sign-up-container {
+   width: auto;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   gap: 2rem;
+}
+
+.home-sign-up-input {
+    width: 386.72px;
+    height: 53px;
+    border-radius: 10px;
+    border: 1px solid #ddd; /* Add border color as needed */
+    background-color: #ffffff;
+    outline: none;
+    
+    /* Text styling */
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: right;
+    color: #000000;
+    padding-right:10px ;
+    /* Placeholder styling */
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.home-sign-up-input::placeholder {
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: right;
+    color: #999999; /* Adjust placeholder color as needed */
+   }
+
+.home-sign-up-input:focus {
+    border-color: #CA0000; /* Change to your preferred focus color */
+}
+
+
+.footer-8-pool-img{
+   position: relative;
+   top: -99px;
+}
+
+/* -----Styling the btn of footer sign up */
+.home-btn-sign-up{
+   width: 114.3px;
+   height: 53px;
+   border-radius: 10px;
+   cursor: pointer;
+   background-color: #000000;
+   border: none;
+   font-weight: 600;
+   font-size: 16px;
+   color: white;
+}
+
 /* ------ FOOTER ----- */
 .footer-style{
    width: auto;
