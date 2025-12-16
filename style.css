@@ -136,9 +136,7 @@ body {
    justify-content: stretch;
    align-items: center;
    gap: 3rem;
-   /* make this a positioned container so absolute children (hero-line) are relative to it */
    position: relative;
-   /* add bottom padding so content doesn't overlap with the hero-line placed outside */
    padding-bottom: 80px;
 }
 
@@ -185,11 +183,10 @@ body {
    justify-content: flex-end;
    row-gap: 1rem;
    align-items: center;
-   padding-right: 24px; /* keep some space from the right edge */
+   padding-right: 24px; 
 }
 
 .hero-line img{
-   /* keep image positioned inline inside the hero-line container */
    position: relative;
    left: 0;
    bottom: 0;
@@ -205,7 +202,7 @@ body {
    height: 54px;
    background-color: white;
    border-radius: 50%;
-   margin-right: 12px; /* space between the circle and the hero-line image */
+   margin-right: 12px; 
 }
 
 .eight-pool-text {
@@ -216,6 +213,162 @@ body {
    color: white;
    border-radius: 50%;
 }
+
+
+/* ----- styling the other part ----- */
+.hero-btn-section{
+   margin-top: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+}
+
+.hero-btn{
+   width: 207px;
+   height: 56px;
+   background-color:black;
+   color: white;
+   border: 2px solid #CA0000;
+   border-radius: 67px;
+   cursor: pointer;
+   font-weight: 600;
+   font-size: 20px;
+}
+
+.hero-btn:hover{
+   background-color: #CA0000;
+}
+
+.hero-active{
+   background-color: #CA0000;
+   border: 2px solid #CA0000;
+
+}
+
+
+/* ----- syling the lists of pictures ----- */
+.list-matches-container{
+   margin-top: 40px;
+   margin-bottom: 80px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   gap: 8rem;
+}
+
+.list-match-description{
+   display: grid;
+   justify-content: center;
+   justify-items: center;
+   width: auto;
+   height: auto;
+
+}
+
+/* -----  styling the topic of the list of the mathces -----*/
+.topic-matches{
+   width: 389px;
+   height: 41.5px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 2rem;
+   background: linear-gradient(277.47deg, #B70000 57.42%, #000000 71.99%);
+   font-weight: 700;
+   font-size: 16px;
+}
+
+/* ----- styling the text of the awards ------ */
+.awards{
+   color: white;
+   font-weight: 700;
+   font-size: 16px;
+}
+
+
+/*----- Styling the table of the lists ----- */
+.home-table {
+   width: 100%;
+   background-color: #222128;
+   color: white;
+   justify-content: start;
+   border-radius: 9px;
+}
+
+.home-table{
+   border-collapse: collapse;
+   text-align: center;
+   padding: 8px;
+}
+
+.home-thead{
+   font-weight: 700;
+   font-size: 16px;
+   color: white;
+   text-align: right;
+   border-bottom: 1px solid #FFFFFF80;
+}
+
+.home-tbody {
+
+   font-weight: 600;
+   font-size: 12px;
+   color: white;
+   text-align: right;
+   border-bottom: 1px solid #FFFFFF80;
+}
+
+
+.home-tbody td{
+   padding: 3px;
+}
+
+.home-tbody tr{
+   font-weight: 600;
+   font-size: 12px;
+   color: white;
+   text-align: right;
+   border-bottom: 1px solid #FFFFFF80;
+}
+
+
+.men-place{
+   display: flex;
+   justify-content: start;
+   align-items: center;  
+   gap:3px;
+}
+.men-place p{
+   color: white;
+   font-weight: 600;
+   font-size: 12px;
+}
+
+/* ----- button of see more ---- */
+.home-see-more {
+   margin-top: 15px;
+   margin-bottom: 15px;
+   background-color: black;
+   width: 119px;
+   height: 30px;
+   font-weight: 600;
+   font-size: 12px;
+   border: 1px solid #CA0000;
+   border-radius: 20px;
+   cursor: pointer;
+   color: white;
+}
+
+/* ----- Syling the price table part ----- */
+.home-price{
+   background: linear-gradient(90deg, #131313 24.52%, #B60000 100%);
+   color: white;
+   font-weight: 600;
+   font-size: 12px;
+}
+
 
  /* -----fixing the picture for section---- */
  .billiard-pic{
@@ -1262,7 +1415,7 @@ body {
    height: 220px ;
    top:10px;
    padding:31px;
-   left: 1819px;
+   left: 1705px;
    border-radius: 100%;
 }
 
@@ -1270,7 +1423,7 @@ body {
 .image-eight-pool{
    position: absolute;
    top: -34px;
-   left:140px;
+   left:30px;
 }
 
 .player-name-headin{
@@ -1423,16 +1576,16 @@ body {
    width: 100%;
 }
 
-thead{
+.players-thead{
    background-color: #5F5F5F;
    border: 1px solid #CA0000;
 }
 
-tbody {
+.players-tbody {
    border: 1px solid #CA0000;
 }
 
-td{
+.players-tbody td{
    text-align: center;
    padding: 20px;
    font-weight: 700;
