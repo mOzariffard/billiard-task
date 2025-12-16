@@ -88,11 +88,11 @@ body {
 }
 
 .input {
-  font-family: "Montserrat", sans-serif;
+  font-family:"Vazirmatn", sans-serif;
   width: 241px;
   height: 35px;
-  padding-right: 2.5rem; /* Changed from padding-left to padding-right for RTL */
-  padding-left: 1rem; /* Add left padding for text */
+  padding-right: 2.5rem;
+  padding-left: 1rem;
   border: 0;
   border-radius: 41px;
   background-color: #ffffff;
@@ -104,6 +104,7 @@ body {
 }
 
 .input::placeholder {
+   font-family: "Va";
   color: #bdbecb;
 }
 
@@ -116,14 +117,18 @@ body {
   display: flex; 
   align-items: center; 
   justify-content: center; 
-  right: 2px; /* Changed from left to right for RTL */
+  right: 2px;
   z-index: 1;
+  cursor: pointer; /* Add pointer cursor */
+  transition: transform 0.2s ease; /* Add hover effect */
 }
+
+
 
 .search-icon {
   width: 16px;
-  height: 16px;
-  fill: black; /* Changed to white to be visible on red background */
+  height:16px;
+  fill: white; /* Make icon white for visibility */
   pointer-events: none;
   position: relative;
   left: 0;
