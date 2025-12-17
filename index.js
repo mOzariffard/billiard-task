@@ -1,3 +1,28 @@
+// Search Icon of home page 
+// Function to perform search
+function performSearch() {
+    const searchInput = document.getElementById('query');
+    const query = searchInput.value.trim();
+    
+    if (query !== '') {
+        // Redirect to search.html with query parameter
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    } else {
+        alert('لطفاً یک کلمه جستجو وارد کنید');
+    }
+}
+
+// Handle Enter key press
+function handleEnterKey(event) {
+    if (event.key === 'Enter' || event.keyCode === 13) {
+        event.preventDefault();
+        performSearch();
+    }
+}
+
+
+
+
 
 // For search part of the matches
 function searchDropdown() {
