@@ -102,6 +102,47 @@
     </div>
 </div>
 
+
+        <!-- Select the year -->
+         <div class="search-input-container" x-data="selectYear()">
+    <!-- Hidden select for form submission -->
+    <select 
+        class="search-year-items"
+        x-model="selectedValue"
+        style="display: none;"
+        name="year"
+    >
+        <option value="">انتخاب سال</option>
+        <template x-for="item in items" :key="item">
+            <option :value="item" x-text="item"></option>
+        </template>
+    </select>
+    
+    <!-- Custom display div -->
+    <div 
+        class="search-year-items custom-select"
+        @click="open = !open"
+        x-text="selectedValue || 'انتخاب سال'"
+        :class="{ 'placeholder': !selectedValue }"
+    ></div>
+    
+    <!-- Dropdown menu -->
+    <div 
+        class="dropdown-menu" 
+        x-show="open"
+        x-transition
+        @click.outside="open = false"
+    >
+        <template x-for="item in filteredItems" :key="item">
+            <div 
+                class="dropdown-item" 
+                @click="selectItem(item)"
+                x-text="item"
+            ></div>
+        </template>
+    </div>
+</div>
+
 </div>
         </form>
 

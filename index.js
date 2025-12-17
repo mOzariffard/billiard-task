@@ -41,3 +41,45 @@ function selectGender(){
         }
     }
 }
+
+function selectYear(){
+    return {
+        open: false, 
+        selectedValue: '',
+        items: [
+            '۱۴۰۳',
+            '۱۴۰۲',
+            '۱۴۰۱',
+            '۱۴۰۰',
+            '۱۳۹۹',
+            '۱۳۹۸',
+            '۱۳۹۷',
+            '۱۳۹۶',
+            '۱۳۹۵',
+            '۱۳۹۴',
+            '۱۳۹۳',
+            '۱۳۹۲',
+            '۱۳۹۱',
+            '۱۳۹۰',
+            '۱۳۸۹',
+            '۱۳۸۸',
+            '۱۳۸۷',
+            '۱۳۸۶',
+            '۱۳۸۵',
+            '۱۳۸۴',
+            '۱۳۸۳',
+            '۱۳۸۲',
+            '۱۳۸۱',
+            '۱۳۸۰'
+        ],
+        
+        get filteredItems() {
+            return this.items;
+        },
+        
+        selectItem(item) {
+            this.selectedValue = item;
+            this.open = false;
+        }
+    }
+}
