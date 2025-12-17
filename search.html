@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vazirmatn@latest/Vazirmatn-font-face.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/> 
+    <title>Search Part</title>
+</head>
+<body class="bg-search">
+    <main>
+        <!-- First Part of Search -->
+        <Section>
+            <div dir="rtl" class="first-search-container">
+                <!-- head of the Text boxes -->
+                <h1> جستجوی مسابقات </h1>
+
+                <div class="search-input-container">
+                    <form action="">
+                        <div class="search-input-container" x-data="searchDropdown()">
+    <form class="search-input-container" action="">
+        <!-- Hidden select that will hold the actual value -->
+        <select 
+            class="search-match-items" 
+            x-model="selectedValue"
+            @click="open = !open"
+            style="display: none;"
+        >
+            <option value="">نام مسابقه را جستجو کنید...</option>
+            <template x-for="item in items" :key="item">
+                <option :value="item" x-text="item"></option>
+            </template>
+        </select>
+        
+        <!-- Custom input display -->
+        <div 
+            class="search-match-items custom-select"
+            @click="open = !open"
+            x-text="selectedValue || 'نام مسابقه را جستجو کنید...'"
+            :class="{ 'placeholder': !selectedValue }"
+        ></div>
+        
+        <!-- Dropdown menu -->
+        <div 
+            class="dropdown-menu" 
+            x-show="open"
+            x-transition
+            @click.outside="open = false"
+        >
+            <template x-for="item in filteredItems" :key="item">
+                <div 
+                    class="dropdown-item" 
+                    @click="selectItem(item)"
+                    x-text="item"
+                ></div>
+            </template>
+        </div>                       
+                        
+                    </form>
+    </div>
+</div>
+                </div>
+            </div>
+        </Section>
+
+    </main>
+</body>
+
+<script src="index.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</html>
