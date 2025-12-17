@@ -21,3 +21,23 @@ function searchDropdown() {
         }
     }
 }
+   
+function selectGender(){
+    return {
+        open: false, 
+        selectedValue: '',
+        items: [
+            'آقایان',
+            'بانوان'   
+        ],
+        
+        get filteredItems() {
+            return this.items;
+        },
+        
+        selectItem(item) {
+            this.selectedValue = item;
+            this.open = false;
+        }
+    }
+}

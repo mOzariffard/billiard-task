@@ -16,22 +16,23 @@
                 <!-- head of the Text boxes -->
                 <h1> جستجوی مسابقات </h1>
 
+                <!-- Matches Select box -->
                 <div class="search-input-container">
-                    <form action="">
+                    <form class="form-style" action="">
                         <div class="search-input-container" x-data="searchDropdown()">
-    <form class="search-input-container" action="">
-        <!-- Hidden select that will hold the actual value -->
-        <select 
-            class="search-match-items" 
-            x-model="selectedValue"
-            @click="open = !open"
-            style="display: none;"
-        >
-            <option value="">نام مسابقه را جستجو کنید...</option>
-            <template x-for="item in items" :key="item">
-                <option :value="item" x-text="item"></option>
-            </template>
-        </select>
+                    <form class="search-input-container" action="">
+                    <!-- Hidden select that will hold the actual value -->
+                    <select 
+                        class="search-match-items" 
+                        x-model="selectedValue"
+                        @click="open = !open"
+                        style="display: none;"
+                    >
+                    <option value="">نام مسابقه را جستجو کنید...</option>
+                    <template x-for="item in items" :key="item">
+                        <option :value="item" x-text="item"></option>
+                    </template>
+                </select>
         
         <!-- Custom input display -->
         <div 
@@ -55,13 +56,55 @@
                     x-text="item"
                 ></div>
             </template>
-        </div>                       
-                        
-                    </form>
+        </div>                     
+    </div>
+
+<div class="search-input-container" x-data="selectGender()">
+    <!-- Hidden select for form submission -->
+    <select 
+        class="search-gender-items"
+        x-model="selectedValue"
+        style="display: none;"
+        name="gender"
+    >
+        <option value="">جنسیت را انتخاب کنید</option>
+        <option value="آقایان">آقایان</option>
+        <option value="بانوان">بانوان</option>
+    </select>
+    
+    <!-- Custom display div -->
+    <div 
+        class="search-gender-items custom-select"
+        @click="open = !open"
+        x-text="selectedValue || 'جنسیت را انتخاب کنید'"
+        :class="{ 'placeholder': !selectedValue }"
+    ></div>
+    
+    <!-- Dropdown with radio buttons -->
+    <div 
+        class="dropdown-menu" 
+        x-show="open"
+        x-transition
+        @click.outside="open = false"
+    >
+        <template x-for="item in items" :key="item">
+            <label class="dropdown-item radio-item">
+                <input 
+                    type="radio" 
+                    :value="item" 
+                    x-model="selectedValue"
+                    @change="selectItem(item)"
+                    name="gender-radio"
+                >
+                <span x-text="item"></span>
+            </label>
+        </template>
     </div>
 </div>
-                </div>
-            </div>
+
+</div>
+        </form>
+        </div>
         </Section>
 
     </main>
