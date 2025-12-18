@@ -2157,6 +2157,27 @@ color: black;
   }
 
 
+  /*----- Matches ----- */
+  .billiard-pic{
+   background-image: none;
+  }
+  
+  .game-container{
+   max-width: 100%;
+   padding: 1rem;
+  }
+
+  .player-container{
+   max-width: 100%;
+   gap: 1rem;
+  }
+  
+  .btn-container{
+   display: grid;
+   justify-content: center;
+   justify-items: center;
+   gap: 1rem;
+  }
 
   /* Imge of the Ranking part */
   .img-container{
