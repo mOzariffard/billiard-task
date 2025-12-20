@@ -108,3 +108,31 @@ function selectYear(){
         }
     }
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById("hamburger");
+  const nav = document.getElementById("nav");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+
+  // Close when clicking a link
+  document.querySelectorAll(".ul-container a").forEach(link => {
+    link.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      nav.classList.remove("active");
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      hamburger.classList.remove("active");
+      nav.classList.remove("active");
+    }
+  });
+});
