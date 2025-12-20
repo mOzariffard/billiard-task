@@ -792,6 +792,10 @@ color: black;
    gap: 2rem;
    margin: 80px;
 }
+
+.ranking-header{
+   margin-bottom: 70px;
+}
 .rank-player-container{
    display: grid;
    justify-content: center;
@@ -2034,6 +2038,10 @@ color: black;
   .bg-ranking-after-ten-place {
     width: 100%;
   }
+
+  .img-container{
+   display: none;
+  }
 }
 
 /* ---------- Tablets ≤ 992px ---------- */
@@ -2181,7 +2189,10 @@ color: black;
   font-weight: bold;
 }
 
-  /* Lists */
+
+
+
+/* Lists */
   .list-matches-container {
     gap: 3rem;
   }
@@ -2192,8 +2203,20 @@ color: black;
   .ranking-third-place-player,
   .ranking-normal-place-player,
   .ranking-after-ten-place-player {
-    width: 100%;
+    max-width: 100%;
   }
+
+
+  .img-container{
+   display: none;
+}
+
+
+
+
+
+
+
 
   /* Footer signup */
   .home-sign-up-section {
@@ -2203,6 +2226,9 @@ color: black;
     gap: 2rem;
   }
 
+  .footer-8-pool-img{
+   display: none;
+  }
   .input-sign-up-container {
     flex-direction: column;
     width: 100%;
@@ -2389,6 +2415,86 @@ color: black;
   border-radius: 8px;
   font-size: 14px;
 }
+
+/* Ranking part */
+
+.rank-player-container{
+   max-width: 100%;
+}
+.ranking-header{
+   text-align: center;
+   margin-bottom: 70px;
+}
+
+
+/* ===== Main container ===== */
+  .ranking-container {
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .ranking-header {
+    margin-bottom: 24px;
+    font-size: 22px;
+  }
+
+  /* ===== Shared size for ALL rows ===== */
+  .bg-ranking-player,
+  .bg-ranking-second-player,
+  .bg-ranking-third-player,
+  .bg-ranking-normal-place,
+  .bg-ranking-after-ten-place {
+   width: 390px;
+    height: 72px;
+    border-radius: 14px;
+  }
+
+  /* ===== Shared inner container ===== */
+  .ranking-player-container,
+  .ranking-second-place-container,
+  .ranking-third-place-player,
+  .ranking-normal-place-player,
+  .ranking-after-ten-place-player {
+    width: calc(100% - 56px);
+    height: 100%;
+    border-radius: 14px 0 0 14px;
+    padding: 0 10px;
+  }
+
+  /* ===== Rank number ===== */
+  .rank-player-container h1,
+  .bg-ranking-player h1,
+  .bg-ranking-second-player h1,
+  .bg-ranking-third-player h1,
+  .bg-ranking-normal-place h1,
+  .bg-ranking-after-ten-place h1 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  /* ===== Player name ===== */
+  .player-name h2,
+  .player-second-place-name h2,
+  .player-third-place-name h2,
+  .player-normal-place-name h2 {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ===== Player images ===== */
+  .ranking-player-img,
+  .ranking-second-player-img,
+  .ranking-third-place-player-img,
+  .ranking-normal-place-player-img {
+    position: static;
+    width: 50px;
+    height: 65px;
+    object-fit: cover;
+  }
 
 
 
