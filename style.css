@@ -2755,6 +2755,26 @@ color: black;
 .burger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
+
+
+
+
+
+/* ----Search part */
+
+.form-style{
+   flex-direction: column;
+}
+
+
+.first-search-container{
+   height: auto;
+}
+
+.search-button{
+   margin: 30px;
+}
+
 }
 
 .burger {
