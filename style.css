@@ -2213,8 +2213,165 @@ color: black;
 
 
 
+  /* ----- Player Part ----- */
+  .image-eight-pool{
+   display: none;
+  }
+ .logo-page {
+   display: none;
+  }
 
+   .players-section {
+    max-width: 100%;
+    height: auto;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 20px;
+  }
 
+  /* ================= LOGO ================= */
+  .logo-page {
+   display: none;
+  }
+
+  /* ================= PLAYER IMAGE AREA ================= */
+  .player-image-section {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .player-material {
+    margin: 0;
+    gap: 12px;
+  }
+
+  .image-players {
+    width: 160px;
+    height: 160px;
+    border-width: 3px;
+  }
+
+  .players-image-player {
+    width: 100%;
+    margin: 0;
+  }
+
+  .player-logo {
+    width: 45px;
+    height: 45px;
+    margin: -35px 0 0 110px;
+    border-width: 3px;
+  }
+
+  .player-logo img{
+   width: 37px;
+   height: auto;
+  }
+
+  /* ================= PLAYER NAME ================= */
+  .player-name-headin {
+    width: 100%;
+    height: auto;
+  }
+
+  .player-name-headin h1 {
+   margin-top: 20px;
+    font-size: 24px;
+    font-weight: 900;
+    text-shadow: none;
+  }
+
+  /* ================= SKILLS SECTION ================= */
+  .skills-section {
+    height: auto;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .skills-items {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);   
+   justify-content: center;
+   justify-items: center;
+  }
+
+  .players-informations {
+    width: 100%;
+    height: auto;
+    padding: 12px;
+  }
+
+  .players-topics h1 {
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .players-description h1 {
+    font-size: 14px;
+    font-weight: 800;
+
+  }
+
+  /* ================= BIO BUTTONS ================= */
+  .players-btn {
+    margin: 24px 0 0;
+    justify-content: center;
+  }
+
+  .players-btn-container {
+    justify-content: center;
+  }
+
+  .players-bio-btn,
+  .players-btn-normal {
+    width: 90px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  /* ================= BIO TEXT ================= */
+  .players-introduction {
+    width: 100%;
+    height: auto;
+  }
+
+  .players-introduction h3 {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  /* ================= TABLE ================= */
+  .table-container {
+    width: 90%;
+    height: auto;
+  }
+
+  .table-container table {
+    max-width: 100%;
+  }
+
+  .table-header h1 {
+    font-size: 16px;
+  }
+
+  .players-tbody td,
+  .table-container th {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .players-thead{
+   width: auto;
+  }
+
+  /* ================= RESULTS ================= */
+  .result,
+  .loose-result {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
 
 
 
