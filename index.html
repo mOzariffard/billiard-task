@@ -4,1104 +4,1022 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vazirmatn@latest/Vazirmatn-font-face.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <title> Home Page </title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vazirmatn@latest/Vazirmatn-font-face.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="script.js" ></script>
+    <title> صفحه اصلی </title>
 </head>
 <body>
-    <head>
-            <!-- Head of the page -->
-        <div dir="rtl" class="head-home-page">
-            <img src="images/header.png" alt="header">
-        </div>
-       <div class="head-container">
+    <head class=" grid  justify-center items-center min-h-screen">
+        <img class="w-full" src="images/header.png" alt="Header">
+        <nav dir="rtl" class="bg-[#222128] flex justify-around items-center w-full h-[73px] " >
+            <!-- link part part -->
+            <div class="relative">
+                    <!-- Hamburger Button -->
+                    <button
+                        id="menuToggle"
+                        class="md:hidden relative z-20 flex items-center justify-center w-10 h-10 text-[#CA0000]"
+                    >
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="closeIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
 
-  <!-- SEARCH (RIGHT) -->
-  <div dir="rtl" id="search-part">
-    <div class="search-icon-container" onclick="performSearch()">
-      <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
-        <g>
-          <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-        </g>
-      </svg>
-    </div>
-    <input
-      id="query"
-      class="input"
-      type="search"
-      placeholder="جستجو کنید..."
-      name="searchbar"
-      onkeypress="handleEnterKey(event)"
-    />
-  </div>
-
-  <!-- HAMBURGER (LEFT - MOBILE) -->
-  <button class="burger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <ul dir="rtl" class="ul-container">
-      <li><a href="index.html">صفحه اصلی</a></li>
-      <li><a href="competions.html">مسابقات</a></li>
-      <li><a href="players.html">بازیکنان</a></li>
-      <li><a href="live.html">زنده</a></li>
-      <li><a href="gallery.html">گالری مسابقات</a></li>
-    </ul>
-  </nav>
-
-</div>
-
+                    <!-- Menu -->
+                    <ul
+                        id="menu"
+                        class="hidden absolute top-12 left-0 w-full bg-black md:static md:flex md:flex-row md:bg-transparent
+                            flex-col items-center gap-4 p-4 z-10"
+                    >
+                        <li><a href="index.html" class="text-[#CA0000] hover:underline">صفحه اصلی</a></li>
+                        <li><a href="#" class="text-[#CA0000] hover:underline">مسابقات</a></li>
+                        <li><a href="#" class="text-[#CA0000] hover:underline">بازیکنان</a></li>
+                        <li><a href="#" class="text-[#CA0000] hover:underline">پخش زنده</a></li>
+                        <li><a href="#" class="text-[#CA0000] hover:underline">گالری مسابقات</a></li>
+                    </ul>
+            </div>
+            <!-- search part -->
+            <div dir="rtl" id="search-part">
+                <div class="search-icon-container" onclick="performSearch()">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                    <g>
+                    <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                    </g>
+                </svg>
+                </div>
+                        <input
+                        id="query"
+                        class="input"
+                        type="search"
+                        placeholder="جستجو کنید..."
+                        name="searchbar"
+                        onkeypress="handleEnterKey(event)"
+                        />
+                    </div>
+             
+        </nav>
     </head>
-    <!-- Main part -->
-    <main>
-            <!-- Hero Section part -->
-            <section>
-                <!-- Postion of the pictures and the texts -->
-                <div dir="rtl" class="hero-section">
-                    <img src="images/hero-img.png" alt="Hero">
-                    
-                    <!-- Hero Text & Btn part -->
-                    <div class="hero-text-container">
-                        <h1 class="hero-header" > مسابقات  بیلیارد </h1>
 
-                        <h3 class="hero-description">
-                            مسابقات بیلیارد یکی از جذاب‌ترین رویدادهای ورزشی–تفریحی در ایران و جهان است که 
-                            هر ساله طرفداران بسیاری را به سالن‌های بیلیارد می‌کشاند. 
-                        </h3>
+    <section dir="rtl">
+        <div class="md:flex grid justify-around items-center bg-[#222128] gap-8">
+         <!-- Image of hero section -->
+         <div class="">
+         <img src="images/hero-img.png" alt="hero part">
+         </div>
+         <div class=" flex flex-col justify-center items-start text-start  gap-4 py-20 px-4">
+            <h1 class="text-8xl text-white">مسابقات  بیلیارد</h1>
+            <h3 class="text-lg text-white mt-8 w-3/4">
+                مسابقات بیلیارد یکی از جذاب‌ترین رویدادهای ورزشی–تفریحی در ایران و جهان است که هر ساله طرفداران بسیاری را به سالن‌های بیلیارد می‌کشاند. 
+            </h3>
+            <button class="gap-8 mt-8">
+            <a href="#" class="text-black bg-white  w-[186px] h-[43px] flex justify-center items-center rounded-full hover:bg-gray-300">
+                ثبت نام
+            </a>
+         </button>
+         </div>
+         <button>
 
-                        <button class="hero-register">
-                            <h1> ثبت نام </h1>
-                        </button>
-                    </div>
-                    <!-- line of the hero section -->
-                    <div class="hero-line">
-                        
-                        <div class="hero-eight-pool-bg">
-                            
-                            <h1 class="eight-pool-text"> 8 </h1>
-                            
-                        </div>
-                        <img  src="images/hero-line.png" alt="line">
+            <!-- image line  -->
+            <div class="hidden lg:grid absolute left-0 right-0 top-[460px] justify-end gap-y-4 items-center pr-6">
+                <div class="flex items-center justify-center relative w-[58px] h-[54px] bg-white rounded-full mr-3">
+                    <div class="bg-black w-[45px] h-[45px] rounded-full flex justify-center items-center">
+                        <span class="text-white text-xl"> 8 </span>
                     </div>
                 </div>
-            </section>
-
-            <!-- Buttons of the pages -->
-            <section>
-                <div dir="rtl" class="hero-btn-section">
-                    <!-- Billiard btn -->
-                    <button class="hero-btn">
-                        <h3> بیلیارد </h3>
-                    </button>
-
-                    <!-- Snooker btn -->
-                    <button class="hero-btn hero-active">
-                        <h3> اسنوکر </h3>
-                    </button>
-
-                    <!-- Pocket btn -->
-                    <button class="hero-btn">
-                        <h3> پاکت </h3>
-                    </button>
-
-                    <!-- High ball btn -->
-                    <button class="hero-btn">
-                        <h3> هیبال </h3>
-                    </button>
-
-                    <button class="hero-btn">
-                        <h3> فوتبال دستی </h3>
-                    </button>
-                </div>
-            </section>
-
-
-            <!-- Lists of Snooker mathces  -->
-            <section>
-                <div dir="rtl" class="list-matches-container">
-                    <!-- First Picture -->
-                    <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/first-men-snooker.png" alt="firt person">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                            مسابقات اسنوکر آقایان طهران کاپ
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-                    
-                    <!-- Second Pictures -->
-                     <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/snkooer-women.png" alt="firt person">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                                مسابقات اسنوکر بانوان طهران کاپ 
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div> 
-
-                    <!-- Third picture -->
-
-                    <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/football.png" alt="football">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                            مسابقات فوتبال دستی طهران کاپ
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-
-
-                    <!-- Forth pitcure -->
-
-                    <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/first-men-snooker.png" alt="Snooker-men">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                            مسابقات اسنوکر آقایان طهران کاپ
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-
-
-                    <!-- Fifth picures -->
-
-                     <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/snkooer-women.png" alt="firt person">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                                مسابقات اسنوکر بانوان طهران کاپ 
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-
-                    <!-- Sixth pictures -->
-
-                     <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/football.png" alt="football">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                            مسابقات فوتبال دستی طهران کاپ
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-
-
-                    <!-- Seventh pictures -->
-
-                    <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/first-men-snooker.png" alt="Snooker-men">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                            مسابقات اسنوکر آقایان طهران کاپ
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-
-
-                    <!-- eight pictures -->
-
-                     <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/snkooer-women.png" alt="firt person">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                                مسابقات اسنوکر بانوان طهران کاپ 
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-
-                    <!-- Nineth Picture -->
-
-                     <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/football.png" alt="football">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                            مسابقات فوتبال دستی طهران کاپ
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-
-
-                    <!-- tenth pitcure -->
-
-                    <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/first-men-snooker.png" alt="Snooker-men">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                            مسابقات اسنوکر آقایان طهران کاپ
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-
-
-                    <!-- eleventh pictures -->
-                     <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/snkooer-women.png" alt="firt person">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                                مسابقات اسنوکر بانوان طهران کاپ 
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-
-                    <!-- tueleveth pictures -->
-
-                     <div class="list-match-description">
-                        <!-- Image of the pictures -->
-                        <img src="images/football.png" alt="football">
-                        <!-- topic of image -->
-                         <div class="topic-matches">
-                            <p> 
-                            مسابقات فوتبال دستی طهران کاپ
-                            </p>
-
-                            <p class="awards"> 
-                                جوایز
-                            </p>
-                         </div>
-                          <!-- table of contents  matches -->
-                             <div dir="rtl" class="home-table">
-                                <table class="home-table">
-                                    <thead class="home-thead">
-                                        <tr>
-                                            <th> <h1>  لیست برنده ها:  </h1> </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="home-tbody">
-                                        <!-- First place  -->
-                                        <tr>
-                                            <td>
-                                                <div class="men-place">   
-                                                <img src="images/Gold-medal.png" alt="firt-place">
-                                                <p> امیر سرخوش </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price"> <p> 50 میلیون ریال </p> </td>
-                                        </tr>
-
-                                        <!-- Second Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/silver-medal.png" alt="Second-place">
-                                                <p> سهیل واحدی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-
-
-                                        <!-- third Place -->
-                                        <tr>
-                                             <td>
-                                                <div class="men-place">   
-                                                <img src="images/bronz-medal.png" alt="Bronz-place">
-                                                <p> حسین وفایی </p>
-                                            </div>
-                                            </td>
-
-                                            <td class="home-price">
-                                                 <p> </p> 
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <button class="home-see-more">
-                                مشاهده بیشتر
-                                </button>
-                            </div>
-                            
-                    </div>
-
-                </div>
-            </section>
-    </main>
-
-
-
-    
-    <!-- Footer of the Home page  -->
-     <footer class="footer-style">
-        <!-- Home Sign up Secion -->
-        <div dir="rtl" class="home-sign-up-section">
-            <div class="home-texts-container">
-                <!-- Header -->
-                <h1> بیلیارد <span>اسکورز </span> </h1>
-                <!-- text -->
-                <h3> برای اطلاع از زمان رویداد ها ثبت نام کنید </h3>
-                
-                <!-- input and button  -->
-                <div class="input-sign-up-container">
-                    <input class="home-sign-up-input" type="text" placeholder="ایمیل یا شماره تلفن">
-
-                    <button class="home-btn-sign-up">
-                        <h3> ثبت نام </h3>
-                    </button>
-                </div>
+                <img src="images/hero-line.png" alt="line">
             </div>
-            <img class="footer-8-pool-img" src="images/footer-eight-pool.png" alt="8-pool">
+            </button>
         </div>
-        <!-- LINKS OF THE SOCIAL MEDIA CONTAINER -->
-        <div  class="footer-container">
-            <!-- FOOTER OF THE SOCIAL MEDIA -->
-            <div class="footer-communication">
-                <h1>راه های ارتباطی:</h1>
-                <div class="icon-container">
-                    <!-- Instagram -->
-                    <a href="#">
-                    <img src="images/instagram-icon.png" alt="instagram-icon">
-                    </a>
-                    <!-- Whatsapp -->
-                    <a href="#">
-                    <img src="images/whatsapp-icon.png" alt="Whatsapp">
-                    </a>
-                    <!-- Telegram -->
-                    <a href="#">
-                        <img src="images/telegram-icon.png" alt="telegram-icon">
-                     </a>
-                    
+    </section>
+
+    <!-- Btn and tables -->
+    <section dir="rtl" class="bg-black min-h-screen pb-90 ">
+        <!-- btn -->
+        <div class="flex justify-center items-center  gap-10 items-center sm:gap-5 flex-wrap pt-16">
+            <button class="bg-black w-[193px] h-[56px] flex justify-center items-center rounded-full hover:bg-[#CA0000]-700 text-white border-2 border-[#CA0000] ">
+               بیلیارد
+            </button>
+
+             <button class="bg-black active w-[193px] h-[56px] flex justify-center items-center rounded-full hover:bg-[#CA0000]-700 text-white border-2 border-[#CA0000] ">
+               اسنوکر
+            </button>
+
+             <button class="bg-black w-[193px] h-[56px] flex justify-center items-center rounded-full hover:bg-[#CA0000]-700 text-white border-2 border-[#CA0000] ">
+               پاکت
+            </button>
+
+             <button class="bg-black w-[193px] h-[56px] flex justify-center items-center rounded-full hover:bg-[#CA0000]-700 text-white border-2 border-[#CA0000] ">
+               هیبال
+            </button>
+
+             <button class="bg-black w-[193px] h-[56px] flex justify-center items-center rounded-full hover:bg-[#CA0000]-700 text-white border-2 border-[#CA0000] ">
+               فوتبال دستی
+            </button>
+        </div>
+
+
+        <!-- Photo of the tables  -->
+        <div dir="rtl" class="flex justify-center items-center gap-40 flex-wrap mt-16">
+
+            <!-- first container -->
+            <div class=" bg-[#222128] justify-center items-center">
+                <!-- first images of snooker -->
+                <img src="images/first-men-snooker.png" alt="snooker">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+            <!-- Second of the image for the women snooker -->
+            <div class=" bg-[#222128] h-full grid justify-center items-center">
+                <img src="images/snkooer-women.png" alt="snooker-women">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+            <!-- for football images -->
+            <div class=" bg-[#222128] justify-center items-center">
+                <img src="images/football.png" alt="snooker">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+            <!-- Seond culomn of images first one -->
+            <div class=" bg-[#222128] justify-center items-center">
+                <img src="images/first-men-snooker.png" alt="snooker">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Button of the container -->
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+
+            <!-- second  pictures of the second culomn  -->
+             <div class="bg-[#222128] grid justify-center items-center">
+                <img src="images/snkooer-women.png" alt="women-snooker">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+                 <!-- Btn of the container  -->
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+            <!-- third pictures of the second culomn -->
+
+            <!-- second  pictures of the second culomn  -->
+             <div class="bg-[#222128] grid justify-center items-center">
+                <img src="images/football.png" alt="football">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+                 <!-- Btn of the container  -->
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+
+
+            <!-- first  pictures of the third culomn  -->
+             <div class="bg-[#222128] grid justify-center items-center">
+                <img src="images/first-men-snooker.png" alt="men-snooker">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+                 <!-- Btn of the container  -->
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+
+            <!-- second  pictures of the second culomn  -->
+             <div class="bg-[#222128] grid justify-center items-center">
+                <img src="images/snkooer-women.png" alt="women-snooker">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+                 <!-- Btn of the container  -->
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+            <!-- Third pictures of the third culomn -->
+
+            <!-- second  pictures of the second culomn  -->
+             <div class="bg-[#222128] grid justify-center items-center">
+                <img src="images/football.png" alt="football">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+                 <!-- Btn of the container  -->
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+
+            <!-- Forth culomn of first pictures -->
+             <div class="bg-[#222128] grid justify-center items-center">
+                <img src="images/first-men-snooker.png" alt="men-snooker">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+                 <!-- Btn of the container  -->
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+            <!-- second  pictures of the forth culomn  -->
+             <div class="bg-[#222128] grid justify-center items-center">
+                <img src="images/snkooer-women.png" alt="women-snooker">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+                 <!-- Btn of the container  -->
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+
+            <!-- third pictures of the forth culomn  -->
+             <div class="bg-[#222128] grid justify-center items-center">
+                <img src="images/football.png" alt="football">
+                <!-- head of the text -->
+                 <div class="flex justify-around items-center h-[41.46px] bg-custom-gradient">
+                    <h3 class="text-m"> مسابقات اسنوکر آقایان طهران کاپ </h3>
+                    <h3 class="text-m text-white"> جوایز </h3>
+                </div>
+                <!-- table for the palaces -->
+                 <div class="bg-[#222128] w-full h-auto p-2 ">
+                    <!-- Table Start -->
+                    <table class=" mt-4 text-start text-white complete-table  w-full ">
+                        <thead class="border-b border-[#D9D9D9] text-xl">
+                            <tr>
+                                <th class="text-start">لیست برنده ها:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="border-b border-[#D9D9D9] text-start text-sm">
+                            <!-- First place -->
+                            <tr class="p-5 border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/Gold-medal.png" alt="Gold-medal"/>
+                                        <span>امیر سرخوش</span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    50 میلیون ریال
+                                </td>
+                            </tr>
+                            
+                            <!-- Second palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/silver-medal.png" alt="silver-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+
+                            <!-- Third palce -->
+                             <tr class="border-b border-[#D9D9D9]">
+                                <td>
+                                    <div class="flex justify-start items-center gap-2">
+                                        <img src="images/bronz-medal.png" alt="bronz-medal"/>
+                                        <span> سهیل واحدی </span>
+                                    </div>
+                                </td>
+                                <td class="bg-custom-gradient text-start text-sm p-[3px] w-27"> 
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 </div>
+                 <!-- Btn of the container  -->
+                 <div class="flex justify-center pb-4">
+                     <button class="w-[119px] h-[30px] bg-black border-2 border-[#CA0000] text-white mt-4 rounded-full hover:bg-[#CA0000]-700 ">
+                            مشاهده بیشتر
+                     </button>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer of the page  -->
+    <footer dir="rtl" class="bg-[#222128]  text-white ">
+        <!-- First container  -->
+        <div class="relative -top-[99px] w-3/4 mx-auto bg-[#CA0000] rounded-xl flex justify-around items-center h-auto p-4">
+            <!-- Text container -->
+             <div  class="grid s justify-around items-center gap-4 ">
+            <h1 class="text-6xl text-white"> بیلیارد <span class="text-black"> اسکورز </span> </h1>
+            <h3 class="text-lg text-white"> برای اطلاع از زمان رویداد ها ثبت نام کنید </h3>
+            <!-- input container -->
+            <div class="flex flex-col sm:flex-row justify-start items-center gap-4">
+                <input
+                type="email"
+                placeholder="ایمیل یا شماره تلفن"
+                class="w-full sm:w-[386px] h-[50px] rounded-md p-4 text-black bg-white"
+                />
+                <button class="bg-black w-full sm:w-[114px] h-[53px] flex justify-center items-center rounded-sm text-white">
+                ثبت نام
+                </button>
+            </div>
+            </div>
+
+            <!-- image container -->
+            <img src="images/footer-eight-pool.png" alt="index-footer-image" class="relative -top-[99px] hidden lg:block mr-[300px]"/>
+        </div>
+
+        <!-- Secont container -->
+        <div class="mt-16 flex flex-col lg:flex-row justify-around items-center gap-8 flex-wrap">
+            <!-- first culomn -->
+            <div class="flex flex-col justify-center items-center gap-4">
+                <h1 class="text-5xl"> راه های ارتباطی: </h1>
+                <!-- images of the social media -->
+                <div class="flex justify-center items-center gap-4">
+                    <img src="images/instagram-icon.png" alt="Instagarm">
+                    <img src="images/telegram-icon.png" alt="telegram-icon">
+                    <img src="images/whatsapp-icon.png" alt="Instagarm">
                 </div>
             </div>
 
-            <!-- FOOTER OF The LINKS  -->
-            <div class="footer-link">
-                <h1>لینک های سریع:</h1>
-                <div class="links-footer-container">
-                    <h2>
-                    <a href="index.html"> صفحه اصلی </a>
-                    </h2>
-                    <a href="competions.html"> مسابقات </a>
-                    <a href="players.html"> بازیکنان </a>
-                    <a href="#"> پخش زنده </a>
+            <!-- Second Culomn -->
+            <div class="flex flex-col justify-center items-start gap-3">
+                <h1 class="text-5xl">  لینک های سریع: </h1>
+                <!-- images of the social media -->
+                <div class="flex flex-col justify-center items-start gap-2 text-xl">
+                    <a href="#">صفحه اصلی </a>
+                    <a href="#">مسابقات </a>
+                    <a href="#"> بازیکنان </a>
                     <a href="#"> گالری مسابقات </a>
                 </div>
             </div>
-            <!-- FOOTER OF THE CONTACT -->
-            
-            
-            <div dir="rtl" class="footer-contact">
-                <h1>تماس با ما:</h1>
-            
-                    <!-- CALL CONTAINER -->
-                    <div class="call-container">
-                        <img src="images/call.svg" alt="CALL">
-                        <h3>شماره تماس: 02144666110</h3>
-                    </div>
-                    <!-- ADDRESS CONTAINER -->
-                        <div class="address-container">
-                            <img src="images/location.svg" alt="Location-icon">
-                            <h3>تهران،میدان آزادی ابتدای لشگری بعد از
-                                <br> شهید فکوری ساختمان رفاه ط1</h3>
-                            </div>
-                            
-                        </div>
-        </div>
 
-        <div dir="rtl" class="copy-right-container">
-            <h2> تمامی حقوق این وبسایت برای<span> بیلیارد اسکورز </span> محفوظ می‌باشد. </h2>
+            <!-- Third Culomn -->
+            <div class="flex flex-col justify-center items-center lg:items-start items-center gap-3">
+                <h1 class="text-5xl">  تماس با ما: </h1>
+                <!-- images of the social media -->
+                <div class="flex flex-col justify-center items-center lg:items-start items-center gap-3 text-xl">
+                    <!-- Telephone container -->
+                    <div class="flex justify-center items-center gap-1">
+                        <img src="images/call.svg" alt="telephone-icon">
+                        <span> شماره تماس: 02144666110 </span>
+                    </div>
+
+                    <!-- address container -->
+                    <div class="flex lg:justify-start justify-center items-center gap-1">
+                        <img src="images/location.svg" alt="location-icon">
+                        <span class="w-3/4 text-center lg:text-start"> تهران،میدان آزادی ابتدای لشگری بعد از شهید فکوری ساختمان رفاه ط1 </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copywrite  -->
+        <div dir="rtl" class="bg-black text-center text-white mt-8 p-4">
+            <span class="text-xl"> تمامی حقوق این سایت متعلق به <span class="text-[#CA0000]">  بیلیارد اسکورز </span> می باشد.  © </span>
+
         </div>
     </footer>
-
-    <script src="index.js"></script>
 </body>
 </html>
+
+
