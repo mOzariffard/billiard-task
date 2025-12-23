@@ -7,10 +7,10 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vazirmatn@latest/Vazirmatn-font-face.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="script.js" ></script>
-    <title> بازی ها  </title>
+    <title></title>
 </head>
 <body>
-    <head>
+    <header>
          <nav dir="rtl" class="bg-black flex justify-around items-center w-full h-[73px] " >
             <!-- link part part -->
             <div class="relative">
@@ -59,76 +59,24 @@
                         />
                     </div>
         </nav>
-    </head>
+    </header>
 
     <!-- image of the section -->
     <section dir="rtl" class="relative w-full h-[413px] flex items-center justify-center">
     <!-- Background with overlay -->
     <div class="absolute inset-0 bg-[url('images/billiard-table.png')] bg-cover bg-center"></div>
-    <div class="absolute inset-0 bg-black opacity-85"></div>
+    <div class="absolute inset-0 bg-black opacity-70"></div>
     <!-- hero part -->
-    <div class="relative grid justify-around items-center gap-25 z-10">
+    <div class="relative grid justify-around items-center gap-35 z-10">
         <h1 class="text-6xl text-white text-center"> لیست بازی ها </h1>
         <!-- Bottom part -->
-        <div class="flex flex-col lg:flex-row justify-center items-center gap-6">
-        <a href="matchs.html" class="bg-black w-[215px] h-[60px] text-white px-6 py-3 rounded-[10px] hover:bg-[#CA0000] active  flex items-center justify-center">بازی ها</a>
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-10">
+            <a href="matchs.html" class="bg-black w-[215px] h-[60px] text-white px-6 py-3 rounded-[10px] hover:bg-[#CA0000] flex items-center justify-center">بازی ها</a>
             <a href="chart.html" class="bg-black w-[215px] h-[60px] text-white px-6 py-3 rounded-[10px] hover:bg-[#CA0000] flex items-center justify-center">جدول حذفی</a>
-            <a href="ranking.html" class="bg-black w-[215px] h-[60px] text-white px-6 py-3 rounded-[10px] hover:bg-[#CA0000] flex items-center justify-center">رنگینک</a>        </div>
+            <a href="ranking.html" class="bg-black w-[215px] h-[60px] text-white px-6 py-3 rounded-[10px] hover:bg-[#CA0000] active flex items-center justify-center">رنگینک</a>
+        </div>
     </div>
 </section>
-
-<!-- Section of the matches -->
- <section dir="rtl" class="bg-black w-full flex flex-col items-center justify-center gap-10 py-10">
-    <!-- Match container -->
-    <div class="grid grid-cols-1 gap-8 px-10 w-full max-w-5xl">
-        <h1 class="text-6xl text-center text-white pb-9"> بازی ها </h1>
-        <!-- Player Container -->
-        <div class="flex lg:flex-row flex-col justify-center items-center gap-13 lg:mr-10">
-            <!-- Player one container -->
-            <div class="flex flex-col justify-center items-center gap-4">
-                <!-- image container -->
-                <div class="relative w-[150px] h-[91px]">
-                    <div class="absolute inset-0 border-2 rounded-[10px] border-[#CA0000] z-0"></div>
-                    <img src="images/یوسف-بابالو-scaled-e1760997048423 1.png" alt="Player 1" class="relative z-10 object-cover w-[103px] h-auto -mt-9.5 mr-5">
-                </div>
-                <h2 class="text-2xl text-white "> یوسف بابالو</h2>
-            </div>
-
-
-        <!-- Scores -->
-        <div class="flex justify-center items-center w-[70px] h-[39px] border-1 border-[#CA0000] rounded-[5px] p-5  gap-2 mb-12">
-            <span class="text-2xl text-center text-white">4</span>
-            <span class="text-2xl text-center text-[#CA0000]">|</span>
-            <span class="text-2xl text-center text-white">6</span>
-        </div>
-
-        <!-- Player 2 -->
-          <!-- Player one container -->
-            <div class="flex flex-col justify-center items-center gap-4">
-                <!-- image container -->
-                <div class="relative w-[150px] h-[91px]">
-                    <div class="absolute inset-0 border-2 rounded-[10px] border-[#CA0000] z-0"></div>
-                    <img src="images/عرفان-معصوم-بابایی-1 1.png" alt="Player 1" class="relative z-10 object-cover w-[121px] h-auto -mt-8 mr-3">
-                </div>
-                <h2 class="text-2xl text-white"> عرفان معصوم بابایی</h2>
-            </div>
-
-        </div>
-        <!-- date of the matches -->
-             <div class="grid justify-center items-center mt-2">
-                <span class="text-lg text-center text-white"> سه شنبه19 آذر </span>
-                <span class="text-lg text-center text-white"> 14:30 </span>
-                <span class="text-lg text-center text-white"> بازی 1 </span>
-                <button class="bg-[#CA0000] w-[146px] h-[38px] rounded-[7px] text-white">
-                <a href="live.html"> پخش زنده </a>
-                </button>
-             </div>
-
-            </div>
-
-             <hr class="w-full bg-[#CA0000] border-2 ">
-
- </section>
 
 </body>
 </html>
