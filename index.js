@@ -135,4 +135,12 @@ document.addEventListener('DOMContentLoaded', function() {
       nav.classList.remove("active");
     }
   });
+
+  
+  // Tournoument Bracket
+  
+
+  
 });
+
+

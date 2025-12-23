@@ -64,6 +64,7 @@
 
 .active {
   background-color: #CA0000;
+  border: 1px solid #CA0000;
 }
 
 /* Ensure all native <button> elements show pointer cursor even if classes are missing */
@@ -71,7 +72,3 @@ button {
   cursor: pointer;
 }
 
-
-.bg-custom-gradient {
-    background: linear-gradient(277.47deg, #B70000 57.42%, #000000 71.99%);
-  }
