@@ -72,3 +72,11 @@ button {
   cursor: pointer;
 }
 
+.img-container {
+   position: absolute;
+   top: 486px;
+   left: -65px;
+   width: 584px;
+   height: 657px;
+   opacity: 1;
+}
