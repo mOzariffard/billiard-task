@@ -72,6 +72,19 @@ button {
   cursor: pointer;
 }
 
+/* Ensure tables with w-full can overflow horizontally on mobile without breaking */
+.complete-table {
+  min-width: 100%;
+}
+
+/* Mobile bracket container: prevent overflow beyond viewport */
+@media (max-width: 1024px) {
+  .lg\:hidden {
+    max-width: 100vw;
+    overflow-x: auto;
+  }
+}
+
 .img-container {
    position: absolute;
    top: 486px;
