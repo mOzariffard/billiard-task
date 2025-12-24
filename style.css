@@ -3,6 +3,10 @@
     font-weight: 700;
 }
 
+
+.bg-custom-gradient{
+  background: linear-gradient(277.47deg, #B70000 57.42%, #000000 71.99%);
+}
 /* for search Icon */
 
 #search-part {
