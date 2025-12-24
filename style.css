@@ -87,6 +87,8 @@ button {
     max-width: 100vw;
     overflow-x: auto;
   }
+
+  
 }
 
 .img-container {
@@ -97,3 +99,58 @@ button {
    height: 657px;
    opacity: 1;
 }
+
+/* NAV DROPDOWN */
+.nav {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  background-color: #222128;
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.nav.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ul-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.ul-container li a {
+  font-size: 18px;
+}
+
+/* ===== BURGER ANIMATION ===== */
+.burger span {
+  transition: all 0.3s ease;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+
+
+
+            
