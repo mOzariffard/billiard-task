@@ -112,30 +112,26 @@ function selectYear(){
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const burger = document.getElementById("hamburger");
-  const nav = document.querySelector(".nav");
+           const menuToggle = document.getElementById("menuToggle");
+const menu = document.getElementById("menu");
+const menuIcon = document.getElementById("menuIcon");
+const closeIcon = document.getElementById("closeIcon");
 
-  burger.addEventListener("click", (e) => {
-    e.stopPropagation();
-    burger.classList.toggle("active");
-    nav.classList.toggle("active");
-  });
-
-  // Close when clicking a link
-  nav.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      burger.classList.remove("active");
-      nav.classList.remove("active");
-    });
-  });
-
-  // Close when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!nav.contains(e.target) && !burger.contains(e.target)) {
-      burger.classList.remove("active");
-      nav.classList.remove("active");
-    }
-  });
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+  menuIcon.classList.toggle("hidden");
+  closeIcon.classList.toggle("hidden");
 });
+
+/* Close menu when clicking outside */
+document.addEventListener("click", (e) => {
+  if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+    menu.classList.add("hidden");
+    menuIcon.classList.remove("hidden");
+    closeIcon.classList.add("hidden");
+  }
+});
+
+        });
 
 
