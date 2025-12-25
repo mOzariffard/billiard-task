@@ -6,7 +6,7 @@
      <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vazirmatn@latest/Vazirmatn-font-face.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <script src="script.js" ></script>
+        <script src="index.js" ></script>
     <title> بازی ها  </title>
 </head>
 <body>
@@ -14,25 +14,53 @@
          <nav dir="rtl" class="bg-black flex justify-around items-center w-full h-[73px] " >
             <!-- link part part -->
             <div class="relative">
-                    <!-- Hamburger Button -->
                     <button
-                        id="menuToggle"
-                        class="md:hidden relative z-20 flex items-center justify-center w-10 h-10 text-[#CA0000]"
-                    >
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                        <path id="closeIcon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
+                    id="menuToggle"
+                    aria-label="Toggle menu"
+                    class="md:hidden relative z-20 flex items-center justify-center w-10 h-10 text-[#CA0000] hover:text-red-700 focus:outline-none transition-colors"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <!-- Menu icon -->
+                    <path
+                        id="menuIcon"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+                    <!-- Close icon -->
+                    <path
+                        id="closeIcon"
+                        class="hidden"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                    />
+                    </svg>
+                </button>
 
-                    <!-- Menu -->
-                    <ul
-                        id="menu"
-                        class="hidden absolute top-12 left-0 w-full bg-black md:static md:flex md:flex-row md:bg-transparent
-                            flex-col items-center gap-4 p-4 z-10"
-                    >
+                <!-- Menu -->
+                <ul
+  id="menu"
+  class="
+    hidden
+    absolute top-14 right-0
+    w-56
+    bg-[#222128]
+    rounded-xl
+    shadow-xl
+    border border-[#CA0000]/40
+
+    flex flex-col items-center gap-4
+    p-4
+    z-50
+
+    md:static md:flex md:flex-row
+    md:w-auto md:bg-transparent md:shadow-none md:border-0 md:rounded-none
+    transition-all duration-200
+  "
+>
                         <li><a href="index.html" class="text-[#CA0000] hover:underline">صفحه اصلی</a></li>
                         <li><a href="#" class="text-[#CA0000] hover:underline">مسابقات</a></li>
                         <li><a href="#" class="text-[#CA0000] hover:underline">بازیکنان</a></li>
