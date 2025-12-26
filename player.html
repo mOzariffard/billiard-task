@@ -248,72 +248,181 @@
         </div>
 
          <!-- table of the player match  -->
-             <div class="mt-10 flex justify-center items-center py-18">
-                <table class=" border border-collapse rounded-lg border-[#CA0000]  w-full lg:w-3/4">
-                    <thead class="text-white text-start text-xl font-bold lg:text-2xl border-b border-[#CA0000]">
-                        <tr>
+              <div class="container mx-auto">
+        
+        <!-- Desktop Table View (Hidden on mobile) -->
+        <div class="hidden lg:block mt-10 py-18">
+            <div class="overflow-hidden rounded-lg border-2 border-[#CA0000] w-full lg:w-3/4 mx-auto">
+                <table class="w-full border-collapse">
+                    <thead class="text-white text-start text-xl font-bold lg:text-2xl">
+                        <tr class="border-b-2 border-[#CA0000]">
                             <th colspan="6" class="text-right py-3 px-4">
-                                <!-- text and icon container -->
                                 <div class="flex justify-start items-center gap-4">
-                                    <img src="images/Cups.png" alt="match-icon" class="w-15 h-15 lg:w-30 lg:h-30">
+                                    <img src="images/Cups.png" alt="match-icon" class="w-10 h-10 lg:w-12 lg:h-12">
                                     <span>مسابقات اخیر</span>
                                 </div>
                             </th>
                         </tr>
-                        <tr class="bg-[#5F5F5F] border-y border-[#CA0000]">
-                            <th class="py-8 px-2">تاریخ</th>
-                            <th class="py-8 px-2">رویداد</th>
-                            <th class="py-8 px-2">حریف </th>
-                            <th class="py-8 px-2">نوع بازی</th>
-                            <th class="py-8 px-2">نتیجه</th>
-                            <th class="py-8 px-2">وضعیت</th>
+                        <tr class="bg-[#5F5F5F] border-y-2 border-[#CA0000]">
+                            <th class="py-4 px-2">تاریخ</th>
+                            <th class="py-4 px-2">رویداد</th>
+                            <th class="py-4 px-2">حریف</th>
+                            <th class="py-4 px-2">نوع بازی</th>
+                            <th class="py-4 px-2">نتیجه</th>
+                            <th class="py-4 px-2">وضعیت</th>
                         </tr>
                     </thead>
-                    <!-- tbody of the table -->
-                    <tbody class="text-center p-4">
-                        <!-- row 1 -->
-                        <tr class="border-b border-[#CA0000]">
-                            <td class="text-white text-lg lg:text-2xl font-thin py-3 px-4"> 1404/09/23 </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-2 px-4"> تورنومنت طهران کاپ </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4"> آرش کیانی</td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4"> اسنوکر </td>
-                            <td class="text-[#26D266] text-lg lg:text-2xl font-bold py-3 px-4"> 7-4 </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4 "> <span class="bg-[#26D266] rounded-full px-2"> برد </span> </td>
+                    <tbody class="text-center">
+                        <tr class="border-b-2 border-[#CA0000]">
+                            <td class="text-white text-lg lg:text-xl font-thin py-3 px-2">1404/09/23</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">تورنومنت طهران کاپ</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">آرش کیانی</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">اسنوکر</td>
+                            <td class="text-[#26D266] text-lg lg:text-xl font-bold py-3 px-2">7-4</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">
+                                <span class="bg-[#26D266] rounded-full px-3 py-1">برد</span>
+                            </td>
                         </tr>
-
-                        <!-- row 2 -->
-                          <tr class="border-b border-[#CA0000]">
-                            <td class="text-white text-lg lg:text-2xl font-thin py-3 px-4"> 1404/09/23 </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-2 px-4"> تورنومنت طهران کاپ </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4">  سهل واحدی</td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4"> اسنوکر </td>
-                            <td class="text-[#CA0000] text-lg lg:text-2xl font-bold py-3 px-4"> 7-6 </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4 "> <span class="bg-[#CA0000] rounded-full px-2"> باخت </span> </td>
+                        <tr class="border-b-2 border-[#CA0000]">
+                            <td class="text-white text-lg lg:text-xl font-thin py-3 px-2">1404/09/23</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">تورنومنت طهران کاپ</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">سهل واحدی</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">اسنوکر</td>
+                            <td class="text-[#CA0000] text-lg lg:text-xl font-bold py-3 px-2">7-6</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">
+                                <span class="bg-[#CA0000] rounded-full px-3 py-1">باخت</span>
+                            </td>
                         </tr>
-
-                        <!-- row 3 -->
-                        <tr class="border-b border-[#CA0000]">
-                            <td class="text-white text-lg lg:text-2xl font-thin py-3 px-4"> 1404/09/25 </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-2 px-4"> تورنومنت طهران کاپ </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4"> علی همتی</td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4"> اسنوکر </td>
-                            <td class="text-[#26D266] text-lg lg:text-2xl font-bold py-3 px-4"> 7-4 </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4 "> <span class="bg-[#26D266] rounded-full px-2"> برد </span> </td>
+                        <tr class="border-b-2 border-[#CA0000]">
+                            <td class="text-white text-lg lg:text-xl font-thin py-3 px-2">1404/09/25</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">تورنومنت طهران کاپ</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">علی همتی</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">اسنوکر</td>
+                            <td class="text-[#26D266] text-lg lg:text-xl font-bold py-3 px-2">7-4</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">
+                                <span class="bg-[#26D266] rounded-full px-3 py-1">برد</span>
+                            </td>
                         </tr>
-
-                          <!-- row 4 -->
-                          <tr class="border-b border-[#CA0000]">
-                            <td class="text-white text-lg lg:text-2xl font-light py-3 px-4"> 1404/09/25 </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-2 px-4"> تورنومنت طهران کاپ </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4">علیرضا رحیمی</td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4"> اسنوکر </td>
-                            <td class="text-[#CA0000] text-lg lg:text-2xl font-bold py-3 px-4"> 7-3 </td>
-                            <td class="text-white text-lg lg:text-2xl font-bold py-3 px-4 "> <span class="bg-[#CA0000] rounded-full px-2"> باخت </span> </td>
+                        <tr class="border-b-2 border-[#CA0000]">
+                            <td class="text-white text-lg lg:text-xl font-thin py-3 px-2">1404/09/25</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">تورنومنت طهران کاپ</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">علیرضا رحیمی</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">اسنوکر</td>
+                            <td class="text-[#CA0000] text-lg lg:text-xl font-bold py-3 px-2">7-3</td>
+                            <td class="text-white text-lg lg:text-xl font-bold py-3 px-2">
+                                <span class="bg-[#CA0000] rounded-full px-3 py-1">باخت</span>
+                            </td>
                         </tr>
-
                     </tbody>
                 </table>
-             </div>
+            </div>
+        </div>
+
+        <!-- Mobile Card View (Visible only on mobile) -->
+        <div class="lg:hidden mt-6">
+            <!-- Header -->
+            <div class="bg-[#231212] border-2 border-[#CA0000] rounded-t-lg p-4 mb-4">
+                <div class="flex items-center gap-3">
+                    <img src="images/Cups.png" alt="match-icon" class="w-8 h-8">
+                    <h2 class="text-white text-xl font-bold">مسابقات اخیر</h2>
+                </div>
+            </div>
+
+            <!-- Match Cards -->
+            <div class="space-y-4">
+                <!-- Card 1 -->
+                <div class="bg-[#231212] border-2 border-[#CA0000] rounded-lg p-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-white text-sm">1404/09/23</span>
+                        <span class="bg-[#26D266] text-white text-sm font-bold rounded-full px-3 py-1">برد</span>
+                    </div>
+                    <h3 class="text-white font-bold text-base mb-2">تورنومنت طهران کاپ</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">حریف:</span>
+                            <span class="text-white font-bold">آرش کیانی</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">نوع بازی:</span>
+                            <span class="text-white font-bold">اسنوکر</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">نتیجه:</span>
+                            <span class="text-[#26D266] font-bold text-lg">7-4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-[#231212] border-2 border-[#CA0000] rounded-lg p-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-white text-sm">1404/09/23</span>
+                        <span class="bg-[#CA0000] text-white text-sm font-bold rounded-full px-3 py-1">باخت</span>
+                    </div>
+                    <h3 class="text-white font-bold text-base mb-2">تورنومنت طهران کاپ</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">حریف:</span>
+                            <span class="text-white font-bold">سهل واحدی</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">نوع بازی:</span>
+                            <span class="text-white font-bold">اسنوکر</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">نتیجه:</span>
+                            <span class="text-[#CA0000] font-bold text-lg">7-6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-[#231212] border-2 border-[#CA0000] rounded-lg p-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-white text-sm">1404/09/25</span>
+                        <span class="bg-[#26D266] text-white text-sm font-bold rounded-full px-3 py-1">برد</span>
+                    </div>
+                    <h3 class="text-white font-bold text-base mb-2">تورنومنت طهران کاپ</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">حریف:</span>
+                            <span class="text-white font-bold">علی همتی</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">نوع بازی:</span>
+                            <span class="text-white font-bold">اسنوکر</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">نتیجه:</span>
+                            <span class="text-[#26D266] font-bold text-lg">7-4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-[#231212] border-2 border-[#CA0000] rounded-lg p-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-white text-sm">1404/09/25</span>
+                        <span class="bg-[#CA0000] text-white text-sm font-bold rounded-full px-3 py-1">باخت</span>
+                    </div>
+                    <h3 class="text-white font-bold text-base mb-2">تورنومنت طهران کاپ</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">حریف:</span>
+                            <span class="text-white font-bold">علیرضا رحیمی</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">نوع بازی:</span>
+                            <span class="text-white font-bold">اسنوکر</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">نتیجه:</span>
+                            <span class="text-[#CA0000] font-bold text-lg">7-3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
      </section>
 
 
