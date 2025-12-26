@@ -155,7 +155,7 @@ button {
 
 /* table of the player */
 
-.table-border{
-    border-collapse: collapse;
-    border-radius: 3px;
+.input-placeholder {
+    color: #bdbecb;
+    text-align: right;
 }
