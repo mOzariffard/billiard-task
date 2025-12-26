@@ -9,7 +9,7 @@
         <script src="index.js" ></script>
     <title> جدول حذفی </title>
 </head>
-<body>
+<body id="top">
     <header>
          <nav dir="rtl" class="bg-black flex justify-around items-center w-full h-[73px] " >
             <!-- link part part -->
@@ -410,6 +410,14 @@
 </section>
 
 
+    
+    <!-- Button of the top -->
+    <div class="bg-[#CA0000] fixed bottom-4 right-4 md:bottom-16 md:right-16 size-10 rounded-full flex items-center justify-center transition-all duration-700 opacity-75 hover:opacity-100 cursor-pointer" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-6 h-6 animate-bounce">
+        <path fill="white" d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/>
+    </svg>
+</div>
+
 <footer dir="rtl" class="bg-[#222128] w-full pt-20 text-white">
     <div class="mt-16 flex flex-col lg:flex-row justify-around items-center gap-8 flex-wrap">
             <!-- first culomn -->
@@ -430,7 +438,7 @@
                 <div class="flex flex-col justify-center items-center lg:items-start gap-2 text-xl">
                     <a href="index.html">صفحه اصلی </a>
                     <a href="matchs.html">مسابقات </a>
-                    <a href="#"> بازیکنان </a>
+                    <a href="player.html"> بازیکنان </a>
                     <a href="#"> گالری مسابقات </a>
                 </div>
             </div>

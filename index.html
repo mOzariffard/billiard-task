@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vazirmatn@latest/Vazirmatn-font-face.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <script src="index.js" ></script>
     <title> صفحه اصلی </title>
 </head>
-<body>
+<body id="top" >
     <head class=" grid  justify-center items-center min-h-screen">
         <img class="w-full" src="images/header.png" alt="Header">
         <nav dir="rtl" class="bg-[#222128] flex justify-around items-center w-full h-[73px] " >
@@ -66,7 +67,7 @@
 
                     <li><a href="index.html" class="text-[#CA0000] hover:underline">صفحه اصلی</a></li>
                     <li><a href="matchs.html" class="text-[#CA0000] hover:underline">مسابقات</a></li>
-                    <li><a href="#" class="text-[#CA0000] hover:underline">بازیکنان</a></li>
+                    <li><a href="player.html" class="text-[#CA0000] hover:underline">بازیکنان</a></li>
                     <li><a href="#" class="text-[#CA0000] hover:underline">پخش زنده</a></li>
                     <li><a href="#" class="text-[#CA0000] hover:underline">گالری مسابقات</a></li>
                 </ul>
@@ -973,6 +974,12 @@
         </div>
     </section>
 
+    <!-- Button of the top -->
+    <div class="bg-[#CA0000] fixed bottom-4 right-4 md:bottom-16 md:right-16 size-10 rounded-full flex items-center justify-center transition-all duration-700 opacity-75 hover:opacity-100 cursor-pointer" onclick="scrollToTop()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-6 h-6 animate-bounce">
+        <path fill="white" d="M342.6 81.4C330.1 68.9 309.8 68.9 297.3 81.4L137.3 241.4C124.8 253.9 124.8 274.2 137.3 286.7C149.8 299.2 170.1 299.2 182.6 286.7L288 181.3L288 552C288 569.7 302.3 584 320 584C337.7 584 352 569.7 352 552L352 181.3L457.4 286.7C469.9 299.2 490.2 299.2 502.7 286.7C515.2 274.2 515.2 253.9 502.7 241.4L342.7 81.4z"/>
+    </svg>
+</div>
 
     <!-- footer of the page  -->
     <footer dir="rtl" class="bg-[#222128]  text-white ">

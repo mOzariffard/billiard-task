@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vazirmatn@latest/Vazirmatn-font-face.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="index.js" ></script>
+    <title> بازیکنان </title>
+</head>
+<body id="top" class="bg-black text-white font-Vazirmatn">
+    <header>
+        <nav dir="rtl" class="bg-[#222128] flex justify-around items-center w-full h-[73px] " >
+            <!-- link part part -->
+            <div class="relative">
+                <!-- Hamburger Button -->
+                <button
+                    id="menuToggle"
+                    aria-label="Toggle menu"
+                    class="md:hidden relative z-20 flex items-center justify-center w-10 h-10 text-[#CA0000] hover:text-red-700 focus:outline-none transition-colors"
+                >
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <!-- Menu icon -->
+                    <path
+                        id="menuIcon"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    />
+                    <!-- Close icon -->
+                    <path
+                        id="closeIcon"
+                        class="hidden"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                    />
+                    </svg>
+                </button>
+
+                <!-- Menu -->
+                <ul
+  id="menu"
+  class="
+    hidden
+    absolute top-14 right-0
+    w-56
+    bg-[#222128]
+    rounded-xl
+    shadow-xl
+    border border-[#CA0000]/40
+
+    flex flex-col items-center gap-4
+    p-4
+    z-50
+
+    md:static md:flex md:flex-row
+    md:w-auto md:bg-transparent md:shadow-none md:border-0 md:rounded-none
+    transition-all duration-200
+  "
+>
+
+                    <li><a href="index.html" class="text-[#CA0000] hover:underline">صفحه اصلی</a></li>
+                    <li><a href="matchs.html" class="text-[#CA0000] hover:underline">مسابقات</a></li>
+                    <li><a href="player.html" class="text-[#CA0000] hover:underline">بازیکنان</a></li>
+                    <li><a href="#" class="text-[#CA0000] hover:underline">پخش زنده</a></li>
+                    <li><a href="#" class="text-[#CA0000] hover:underline">گالری مسابقات</a></li>
+                </ul>
+                </div>
+
+            <!-- search part -->
+            <div dir="rtl" id="search-part">
+                <div class="search-icon-container" onclick="performSearch()">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                    <g>
+                    <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                    </g>
+                </svg>
+                </div>
+                        <input
+                        id="query"
+                        class="input"
+                        type="search"
+                        placeholder="جستجو کنید..."
+                        name="searchbar"
+                        onkeypress="handleEnterKey(event)"
+                        />
+                    </div>
+             
+        </nav>
+    </header>
+    <main dir="rtl" class="bg-[#CA0000] grid grid-cols-1 justify-center items-center mt-16  py-16 rounded-lg  mx-10">
+        <!-- Players container -->
+         <div class="flex flex-row justify-between items-center ">
+
+            <img src="images/logo-player.png" alt="">
+
+            <!-- image of the player -->
+             <div class="grid grid-cols-1 justify-center items-center">
+                <img src="images/player.png" alt="player" class=" w-64 h-80 rounded-lg border-4 border-white shadow-lg">
+                <h1 class="text-3xl text-center mt-4 font-bold">نام بازیکن</h1>
+
+             </div>
+
+            <img src="images/8pool.png" alt="8-pool" class=" pacity-20">
+         </div>
+
+    </main>
+</body>
+</html>
