@@ -1,6 +1,8 @@
 *{
     font-family: "Vazirmatn", sans-serif;
     font-weight: 700;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 
@@ -151,6 +153,9 @@ button {
 
 
 
+/* table of the player */
 
-
-            
+.table-border{
+    border-collapse: collapse;
+    border-radius: 3px;
+}
